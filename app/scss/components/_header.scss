@@ -1,0 +1,181 @@
+.header-triggers {
+    padding: 25px 0;
+    background-color: #ebebeb;
+    & .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 244px;
+    height: 40px;
+    background-color: #ffffff;
+    & input {
+        width: 100%;
+        height: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: 'Gilroy Regular';
+        font-size: 15px;
+        line-height: 15px;
+        color: #b1b1b1;
+        text-transform: uppercase;
+        &::-webkit-input-placeholder {color: #b1b1b1;}
+        &::-moz-placeholder  {color: #b1b1b1;}
+        &:-ms-input-placeholder  {color: #b1b1b1;}
+        &:-moz-placeholder  {color: #b1b1b1;}
+    }
+    & button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px;
+        height: 40px;
+        background: transparent;
+        & img {
+            width: 20px;
+            height: 21px;
+        }
+    }
+}
+
+.call-triggers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & a:not(.callback-trigger) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 14px;
+        font-family: 'Gilroy Regular';
+        font-size: 18px;
+        line-height: 18px;
+        color: #636363;
+        & img {
+            width: 34px;
+            height: 34px;
+            margin-right: 10px;
+        }
+    }
+    & .callback-trigger {
+        display: inline-block;
+        margin-top: 1px;
+        padding-bottom: 1px;
+        font-family: 'Gilroy Bold';
+        font-size: 16px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #8dc63f;
+        border-bottom: 1px solid #8dc63f;
+        transition: 0.3s ease;
+        &:hover {border-bottom: 1px solid transparent;}
+    }
+}
+
+.header-navigation {
+    padding: 5px 0 34px;
+    background-color: #ffffff;
+    .wrapper {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    & .logo {
+        display: block;
+        width: 100%;
+        max-width: 190px;
+        & img {width: 100%;}
+    }
+}
+
+nav {
+    position: relative;
+    & ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        & li {
+            &:not(:last-child) {margin-right: 31px;}
+            & a {
+                position: relative;
+                font-family: 'Gilroy Bold';
+                font-size: 18px;
+                line-height: 18px;
+                color: #464646;
+                text-transform: uppercase;
+                transition: 0.3s ease;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -46px;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    background-color: #8dc63f;
+                    transition: 0.3s ease;
+                    opacity: 0;
+                }
+                &:hover {
+                    color: #8dc63f;
+                    &::before {opacity: 1;}
+                }
+            }
+            
+        }
+    }
+}
+.menu-hidden {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 55px 50px;
+    background-color: #ffffff;
+    z-index: 4;
+    box-shadow: 0 0 9px 1px #E7E7E7;
+    &-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        width: 100%;
+        padding-top: 30px;
+    }
+    &-column {
+        &:not(:last-child) {margin-right: 40px;}
+        & ul {
+            display: block;
+            li {
+                & a {
+                    display: block;
+                    margin-bottom: 13px;
+                    font-family: 'Gilroy Regular';
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: #4c4c4c;
+                    text-transform: none;
+                    transition: 0.3s ease;
+                    &::before {display: none;}
+                    &:hover{color: #8dc63f;}
+                }
+                &.menu-hidden-title a {
+                    margin-bottom: 10px;
+                    font-family: 'Gilroy Black';
+                    font-size: 21px;
+                    line-height: 21px;
+                    text-transform: uppercase;
+                    transition: 0.3s ease;
+                }
+            }
+        }
+    }
+}
