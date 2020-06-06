@@ -1,0 +1,32 @@
+.benefits {
+    padding: 0 0 97px;
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .bnf {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            &-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 23px;
+                width: 100px;
+                min-width: 100px;
+                height: 100px;
+                background-color: #f8f8f8;
+                border-radius: 50%;
+                & img {max-width: 46px;}
+            }
+            & p {
+                max-width: 140px;
+                font-family: 'Gilroy Regular';
+                font-size: 16px;
+                line-height: 21px;
+                color: #363636;
+            }
+        }
+    }
+}

@@ -144,6 +144,7 @@ nav {
     box-shadow: 0 0 9px 1px #E7E7E7;
     &-wrapper {
         position: absolute;
+        z-index: 7;
         top: 100%;
         left: 0;
         display: none;

@@ -2,7 +2,7 @@ var common = {
 	init: function() {
 		// common.fixNavigation();
 		common.main();
-		// common.carousel();
+		common.carousel();
 	},
 	fixNavigation: function(){
 		function fixPanel() {
@@ -48,15 +48,18 @@ var common = {
 	},
 	carousel: function(){
 
-		$('.news-slider').slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-				dots: false,
-				fade: true,
-				asNavFor: '.news-slider-nav',
-				adaptiveHeight: true
-			});
+		$('.banner-slider').owlCarousel({
+			loop:true,
+			nav: false,
+			dots: true,
+			items: 1,
+			margin:0,
+			autoplay:true,
+			autoplayTimeout:3000,
+			autoplayHoverPause:true,
+			animateOut: 'fadeIn',
+			animateIn: 'fadeIn',
+		});
 			
 		$('.news-slider-nav').slick({
 		dots: false,

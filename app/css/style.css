@@ -366,6 +366,37 @@ button.ui-button::-moz-focus-inner {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 20px; }
+  .wrapper.wrapper-m {
+    max-width: 1300px; }
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 196px;
+  height: 51px;
+  font-family: 'Gilroy Bold';
+  font-size: 16px;
+  line-height: 51px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #8dc63f;
+  text-transform: uppercase;
+  border-radius: 25px;
+  transition: 0.3s ease; }
+
+.btn:hover {
+  background-color: #6ca954; }
+
+.title {
+  display: block;
+  margin-bottom: 90px;
+  font-family: 'Gilroy Black';
+  font-size: 45px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #4c4c4c; }
 
 .header-triggers {
   padding: 25px 0;
@@ -501,6 +532,7 @@ nav {
   box-shadow: 0 0 9px 1px #E7E7E7; }
   .menu-hidden-wrapper {
     position: absolute;
+    z-index: 7;
     top: 100%;
     left: 0;
     display: none;
@@ -530,6 +562,210 @@ nav {
       line-height: 21px;
       text-transform: uppercase;
       transition: 0.3s ease; }
+
+.banner {
+  padding: 60px 0 40px; }
+  .banner-wrapper {
+    width: 100%;
+    max-width: 1330px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px; }
+  .banner-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .banner-item-cnt {
+      width: 100%;
+      max-width: 580px;
+      padding-right: 15px; }
+  .banner-img {
+    width: 100%;
+    max-width: 515px;
+    height: 508px; }
+    .banner-img img {
+      width: 100%;
+      display: none; }
+  .banner-title {
+    display: block;
+    margin-bottom: 20px;
+    font-family: 'Gilroy Black';
+    font-size: 39px;
+    line-height: 53px;
+    color: #464646; }
+
+.banner-slider .owl-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; }
+  .banner-slider .owl-dots .owl-dot {
+    display: block;
+    width: 100%;
+    height: 2px;
+    max-width: 59px;
+    background-color: #ebebeb !important;
+    transition: 0.3s ease; }
+    .banner-slider .owl-dots .owl-dot:not(:last-child) {
+      margin-right: 6px; }
+    .banner-slider .owl-dots .owl-dot span {
+      display: none; }
+    .banner-slider .owl-dots .owl-dot.active {
+      background-color: #8dc63f !important; }
+
+.infobanner {
+  padding-bottom: 145px; }
+  .infobanner-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .infobanner-list a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      max-width: 367px;
+      height: 162px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+      .infobanner-list a > span {
+        position: relative;
+        left: 30px; }
+        .infobanner-list a > span span {
+          display: block;
+          font-family: 'PF Din Text Cond Pro Bold';
+          text-transform: uppercase;
+          line-height: 27px;
+          color: #ffffff; }
+          .infobanner-list a > span span.infobanner-title {
+            font-size: 36px;
+            line-height: 40px; }
+          .infobanner-list a > span span.infobanner-title-s {
+            font-size: 21px; }
+          .infobanner-list a > span span.infobanner-title-m {
+            font-size: 26px; }
+
+.benefits {
+  padding: 0 0 97px; }
+  .benefits-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .benefits-list .bnf {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+      .benefits-list .bnf-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 23px;
+        width: 100px;
+        min-width: 100px;
+        height: 100px;
+        background-color: #f8f8f8;
+        border-radius: 50%; }
+        .benefits-list .bnf-icon img {
+          max-width: 46px; }
+      .benefits-list .bnf p {
+        max-width: 140px;
+        font-family: 'Gilroy Regular';
+        font-size: 16px;
+        line-height: 21px;
+        color: #363636; }
+
+.infoblock {
+  padding-bottom: 94px; }
+  .infoblock .wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; }
+    .infoblock .wrapper .logo {
+      width: 100%;
+      max-width: 190px;
+      margin-right: 86px; }
+      .infoblock .wrapper .logo img {
+        width: 100%; }
+  .infoblock-cnt p {
+    font-family: 'Gilroy Regular';
+    font-size: 16px;
+    line-height: 21px;
+    color: #898989; }
+  .infoblock-cnt h5 {
+    margin-bottom: 21px;
+    font-family: 'Gilroy Bold';
+    font-size: 18px;
+    line-height: 21px;
+    color: #8dc63f; }
+  .infoblock-cnt .paragraph-item:not(:last-child) {
+    margin-bottom: 54px; }
+  .infoblock-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 50px; }
+  .infoblock-column {
+    width: 100%;
+    max-width: 385px; }
+
+.infoblock-popular {
+  padding-top: 40px; }
+  .infoblock-popular h5 {
+    display: inline-block;
+    margin-bottom: 0; }
+  .infoblock-popular a {
+    display: inline-block;
+    padding: 10px;
+    font-family: 'Gilroy Regular';
+    font-size: 12px;
+    line-height: 12px;
+    color: #898989;
+    border-radius: 7px;
+    box-shadow: 0 0 3px lightgray;
+    border: 1px solid #ebebeb;
+    transition: 0.3s ease; }
+    .infoblock-popular a:hover {
+      box-shadow: none; }
+    .infoblock-popular a:not(:last-child) {
+      margin-right: 10px;
+      margin-bottom: 17px; }
+
+.prices {
+  padding-bottom: 110px; }
+  .prices-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; }
+  .prices .price-item {
+    display: block;
+    width: 100%;
+    max-width: 180px; }
+    .prices .price-item:hover .price-name {
+      color: #8dc63f; }
+  .prices .price-img {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 156px;
+    height: 148px;
+    margin: 0 auto 35px;
+    background-color: #f8f8f8; }
+    .prices .price-img img {
+      position: absolute;
+      bottom: -15px;
+      right: 15px; }
+  .prices .price-name {
+    display: block;
+    font-family: 'Gilroy Regular';
+    font-size: 21px;
+    line-height: 21px;
+    text-align: center;
+    color: #4c4c4c;
+    transition: 0.3s ease; }
 
 .footer {
   background-color: #363636;

@@ -3,4 +3,37 @@
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 20px;
+    &.wrapper-m {
+        max-width: 1300px;
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 196px;
+    height: 51px;
+    font-family: 'Gilroy Bold';
+    font-size: 16px;
+    line-height: 51px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #8dc63f;
+    text-transform: uppercase;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {background-color: #6ca954;}
+
+.title {
+    display: block;
+    margin-bottom: 90px;
+    font-family: 'Gilroy Black';
+    font-size: 45px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: #4c4c4c;
 }
