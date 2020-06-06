@@ -26,6 +26,20 @@ var common = {
 		$('.menu-hidden-trigger').hover(function(){
 			$(this).find('.menu-hidden-wrapper').fadeToggle('fast');
 		});
+		$('.item-trigger').click(function(){
+			$(this).toggleClass('active');
+		});
+
+		$('.tabs-section a').click(function(e){
+			e.preventDefault();
+			if($(this).hasClass('.active') == false) {
+				var tabCnt = '.' + $(this).attr('data-cnt');
+				$(this).closest('.tabs-wrapper').find('.tabs-section a.active, .tab-cnt').removeClass('active')
+				$(tabCnt).addClass('active')
+				$(this).addClass('active');
+				var bLazy = new Blazy({});
+			}
+		});
 
 		// var bLazy = new Blazy({});
 
@@ -60,20 +74,7 @@ var common = {
 			animateOut: 'fadeIn',
 			animateIn: 'fadeIn',
 		});
-			
-		$('.news-slider-nav').slick({
-		dots: false,
-		vertical: true,
-		slidesToShow: 3,
-				slidesToScroll: 1,
-				arrows: false,
-				dots: false,
-		slidesToScroll: 1,
-				verticalSwiping: false,
-				focusOnSelect: true,
-				asNavFor: '.news-slider',
-			});
-			
+						
 	},
 };
 

@@ -398,6 +398,45 @@ button.ui-button::-moz-focus-inner {
   text-transform: uppercase;
   color: #4c4c4c; }
 
+.tab-cnt {
+  display: none; }
+
+.tab-cnt.active {
+  display: block; }
+
+.tabs-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 69px; }
+  .tabs-section a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-family: 'Gilroy Bold';
+    font-size: 21px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #4c4c4c;
+    transition: 0.3s ease; }
+    .tabs-section a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: #8dc63f;
+      opacity: 0;
+      transition: 0.3s ease; }
+    .tabs-section a:not(:last-child) {
+      margin-right: 32px; }
+    .tabs-section a:hover, .tabs-section a.active {
+      color: #8dc63f; }
+      .tabs-section a:hover::before, .tabs-section a.active::before {
+        opacity: 1; }
+
 .header-triggers {
   padding: 25px 0;
   background-color: #ebebeb; }
@@ -766,6 +805,166 @@ nav {
     text-align: center;
     color: #4c4c4c;
     transition: 0.3s ease; }
+
+.catalog-preview {
+  padding-bottom: 33px; }
+
+.catalog-head .title {
+  margin-bottom: 30px; }
+
+.catalog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap; }
+  .catalog-list.tab-cnt {
+    display: none; }
+  .catalog-list.active {
+    display: flex; }
+
+.catalog-item {
+  position: relative;
+  width: 100%;
+  max-width: 298px;
+  margin-bottom: 27px;
+  padding: 8px 25px 30px;
+  background-color: #ffffff;
+  border: 1px solid #ebebeb;
+  border-radius: 15px;
+  transition: 0.3s ease;
+  overflow: hidden; }
+  .catalog-item:hover {
+    box-shadow: 0 0 20px #ebebeb; }
+  .catalog-item-img {
+    display: block;
+    width: 100%;
+    height: 202px;
+    margin-bottom: 9px; }
+    .catalog-item-img img {
+      max-width: 100%;
+      max-height: 100%; }
+  .catalog-item-title {
+    display: block;
+    margin-bottom: 9px;
+    font-family: 'Gilroy Bold';
+    font-size: 21px;
+    line-height: 21px;
+    color: #8dc63f;
+    text-transform: uppercase;
+    transition: 0.3s ease; }
+    .catalog-item-title:hover {
+      color: #6ca954; }
+  .catalog-item p {
+    display: block;
+    margin-bottom: 12px;
+    font-family: 'Gilroy Regular';
+    font-size: 16px;
+    line-height: 16px;
+    color: #262626; }
+  .catalog-item-price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px; }
+    .catalog-item-price span {
+      font-family: 'Gilroy Bold';
+      font-size: 21px;
+      line-height: 21px; }
+      .catalog-item-price span.price-value {
+        font-size: 16px;
+        line-height: 16px; }
+      .catalog-item-price span.old {
+        margin-right: 16px;
+        color: #c2c2c2; }
+        .catalog-item-price span.old span:not(.price-value) {
+          text-decoration: line-through; }
+  .catalog-item-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .catalog-item-links .btn {
+      max-width: 139px;
+      height: 45px;
+      margin-right: 10px;
+      font-size: 18px;
+      line-height: 45px; }
+
+.link-text {
+  font-family: 'Gilroy Bold';
+  font-size: 16px;
+  line-height: 20px;
+  color: #8dc63f;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.3s ease; }
+  .link-text:hover {
+    color: #6ca954; }
+
+.stickers {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; }
+  .stickers .sticker {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 66px;
+    height: 36px;
+    font-family: 'Gilroy SemiBold';
+    font-size: 16px;
+    line-height: 16px;
+    color: #ffffff;
+    text-transform: uppercase; }
+    .stickers .sticker:not(:last-child) {
+      margin-bottom: 6px; }
+    .stickers .sticker.sticker-top {
+      background-color: #8dc63f; }
+    .stickers .sticker.sticker-stock {
+      background-color: #f7941c; }
+
+.item-triggers {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .item-triggers .item-trigger {
+    cursor: pointer; }
+    .item-triggers .item-trigger:not(:last-child) {
+      margin-right: 9px; }
+    .item-triggers .item-trigger path {
+      fill: #DEDEDE;
+      transition: 0.3s ease-out; }
+    .item-triggers .item-trigger:hover path,
+    .item-triggers .item-trigger.active path {
+      fill: #8dc63f; }
+
+.circle-list {
+  padding: 0 0 19px;
+  margin: 0;
+  list-style: none; }
+  .circle-list li {
+    position: relative;
+    padding-left: 12px;
+    font-family: 'Gilroy SemiBold';
+    font-size: 11px;
+    line-height: 18px;
+    color: #363636; }
+    .circle-list li::before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #8dc63f; }
 
 .footer {
   background-color: #363636;
