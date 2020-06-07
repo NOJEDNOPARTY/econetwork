@@ -105,7 +105,12 @@ nav {
         margin: 0;
         list-style: none;
         & li {
-            &:not(:last-child) {margin-right: 31px;}
+            &:not(:last-child) {
+                margin-right: 31px;
+                @media (max-width: 1170px) {
+                    margin-right: 22px;
+                }
+            }
             & a {
                 position: relative;
                 font-family: 'Gilroy Bold';
@@ -114,6 +119,10 @@ nav {
                 color: #464646;
                 text-transform: uppercase;
                 transition: 0.3s ease;
+                @media (max-width: 1170px) {
+                    font-size: 16px;
+                    line-height: 16px;
+                }
                 &::before {
                     content: '';
                     position: absolute;

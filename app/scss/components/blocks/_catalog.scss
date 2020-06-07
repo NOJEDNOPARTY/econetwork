@@ -113,14 +113,23 @@
         justify-content: center;
         min-width: 66px;
         height: 36px;
+        padding: 0 5px;
         font-family: 'Gilroy SemiBold';
         font-size: 16px;
         line-height: 16px;
         color: #ffffff;
         text-transform: uppercase;
         &:not(:last-child) {margin-bottom: 6px;}
-        &.sticker-top {background-color: #8dc63f;}
-        &.sticker-stock {background-color: #f7941c;}
+        &-s {
+            font-size: 11px;
+            line-height: 11px;
+        }
+        &-m {
+            font-size: 12px;
+            line-height: 12px;
+        }
+        &.sticker-green {background-color: #8dc63f;}
+        &.sticker-orange {background-color: #f7941c;}
     }
 }
 

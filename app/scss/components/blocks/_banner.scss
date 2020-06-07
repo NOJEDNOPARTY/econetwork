@@ -1,10 +1,11 @@
 .banner {
-    padding: 60px 0 40px;
-    &-wrapper {
-        width: 100%;
-        max-width: 1330px;
-        margin:  0 auto;
-        padding: 0 20px 0 20px;
+    padding: 20px 0 16px;
+    & .wrapper {
+        padding-left: 162px;
+        @media (max-width: 1470px) {
+            max-width: 1180px;
+            padding-left: 20px;
+        }
     }
     &-item {
         display: flex;
@@ -20,6 +21,10 @@
         width: 100%;
         max-width: 515px;
         height: 508px;
+        @media (max-width: 1470px) {
+            max-width: 360px;
+            height: auto;
+        }
         & img {width: 100%;display: none;}
     }
     &-title {
@@ -29,12 +34,16 @@
         font-size: 39px;
         line-height: 53px;
         color: #464646;
+        @media (max-width: 1150px) {
+            font-size: 32px;
+            line-height: 42px;
+        }
     }
 }
 
 .banner-slider .owl-dots {
     position: absolute;
-    bottom: 30px;
+    bottom: 15px;
     left: 0;
     display: flex;
     align-items: center;

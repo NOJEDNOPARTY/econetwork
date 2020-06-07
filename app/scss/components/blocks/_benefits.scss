@@ -19,6 +19,9 @@
                 background-color: #f8f8f8;
                 border-radius: 50%;
                 & img {max-width: 46px;}
+                @media (max-width: 1170px)  {
+                    margin-right: 10px;
+                }
             }
             & p {
                 max-width: 140px;
@@ -26,6 +29,10 @@
                 font-size: 16px;
                 line-height: 21px;
                 color: #363636;
+                @media (max-width: 1170px)  {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
             }
         }
     }

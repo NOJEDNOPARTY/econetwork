@@ -1,0 +1,63 @@
+.sections {
+    padding-bottom: 100px;
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &-item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 563px;
+        padding-right: 30px;
+        background-image: url('../images/gray.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 294px;
+        background-position: center;
+        &:not(:last-child) {margin-right: 10px;}
+    }
+    &-cnt {
+        padding: 134px 15px 20px 50px;
+        @media (max-width: 1600px) {padding: 50px 15px 20px 15px;}
+    }
+    &-title {
+        display: block;
+        margin-bottom: 21px;
+        font-family: 'Gilroy Black';
+        font-size: 26px;
+        line-height: 26px;
+        text-transform: uppercase;
+        color: #4c4c4c;
+        transition: 0.3s ease;
+        @media (max-width: 1270px) {
+            margin-bottom: 10px;
+            font-size: 20px;
+            line-height: 20px;
+        }
+        &:hover {color: #8dc63f;}
+    }
+    &-links {
+        & a {
+            display: inline-block;
+            margin-bottom: 22px;
+            font-family: 'Gilroy Regular';
+            font-size: 14px;
+            line-height: 14px;
+            color: #4c4c4c;
+            transition: 0.3s ease;
+            &:not(:last-child) {margin-right: 20px;}
+            &:hover {color: #8dc63f;}
+            @media (max-width: 1270px) {margin-bottom: 10px;}
+        }
+    }
+    &-img {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        max-width: 300px;
+        & img {max-width: 100%;}
+        @media (max-width: 1600px) {max-width: 200px;}
+    }
+}

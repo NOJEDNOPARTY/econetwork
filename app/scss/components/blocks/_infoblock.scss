@@ -38,6 +38,7 @@
     &-column {
         width: 100%;
         max-width: 385px;
+        &:not(:last-child) {padding-right: 15px;}
     }
 }
 
