@@ -47,9 +47,21 @@ var common = {
 	},
 	main: function(){
 
-		$('.menu-hidden-trigger').hover(function(){
-			$(this).find('.menu-hidden-wrapper').fadeToggle('fast');
-		});
+		if($(window).width() < 993) {
+			$('.menu-hidden-title').click(function(){
+				$(this).closest('ul').toggleClass('open');
+			});
+			$('.nav-trigger').click(function(){
+				$(this).toggleClass('open');
+				$('header').toggleClass('open');
+				$('body').toggleClass('hidden');
+			});
+		}
+		if($(window).width() > 992) {
+			$('.menu-hidden-trigger').hover(function(){
+				$(this).find('.menu-hidden-wrapper').fadeToggle('fast');
+			});
+		}
 
 		$('.caller').hover(function(){
 			$(this).toggleClass('open')
