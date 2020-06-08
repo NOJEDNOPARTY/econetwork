@@ -29,22 +29,6 @@ var common = {
 		
 	},
 	fixNavigation: function(){
-		// function fixPanel() {
-		// 	if ($('.header-top').offset().top + $('.header-top').height() <= $(window).scrollTop()) {
-		// 		$('header nav').addClass('fixed-nav');
-		// 		$('.header-top').css({'margin-bottom':$('header nav').height()})
-		// 	}else {
-		// 			$('header nav').removeClass('fixed-nav')
-		// 			$('.header-top').css({'margin-bottom':0})
-		// 	}
-		// };
-		// fixPanel();
-		// $(window).scroll(function() {
-		// 	if($(window).width() > 993) {
-		// 		fixPanel();
-		// 	}
-		// });
-
 		var header = $('header'),
 		scrollPrev = 0;
 		function fixNav(){
@@ -56,15 +40,25 @@ var common = {
 			}else if(scrolled > header.outerHeight() && scrolled > scrollPrev){
 				header.addClass('out');
 				header.addClass('fixed');
-				$('body').css('margin-top', $('.header-navigation').outerHeight());
+				if($(window).width() < 993) {
+					$('body').css('margin-top', header.outerHeight());
+				}else {
+					$('body').css('margin-top', $('.header-navigation').outerHeight());
+				}
+				
 			}else {
 				header.removeClass('out');
 			}
 			scrollPrev = scrolled;
 		};
-		fixNav();
-		$(window).scroll(function() {
-			fixNav();
+		
+
+		$(window).scroll(function() {	
+			if($(window).width() < 993) {
+				fixNav();
+			}else {
+				
+			}
 		});
 	},
 	main: function(){
@@ -73,7 +67,8 @@ var common = {
 			$('.menu-hidden-title').click(function(){
 				$(this).closest('ul').toggleClass('open');
 			});
-			$('.nav-trigger').click(function(){
+			$('.nav-trigger').click(function(e){
+				e.preventDefault()
 				$(this).toggleClass('open');
 				$('header').toggleClass('open');
 				$('body').toggleClass('hidden');
@@ -104,20 +99,23 @@ var common = {
 			}
 		});
 
-		// jQuery(function($){
-		// 	$(document).mouseup(function (e){ 
-		// 		var popup = $(".popup");
-		// 		if (!popup.is(e.target) 
-		// 			&& popup.has(e.target).length === 0) { 
-		// 			$('.popup-wrapper').fadeOut('fast');
-		// 			$('body').removeClass('hidden');
-		// 		}
-		// 	});
-		// });
+		jQuery(function($){
+			$(document).mouseup(function (e){ 
+				var popup = $(".popup");
+				if (!popup.is(e.target) 
+					&& popup.has(e.target).length === 0) { 
+						if($('.popup-wrapper').hasClass('active') == true){
+							$('.popup-wrapper').fadeOut('fast');
+							$('body').removeClass('hidden');
+						}
+				}
+			});
+		});
 
 		$('.call-popup').click(function(event){
 			event.preventDefault();
 			var popup  = '#' + $(this).attr('data-popup');
+			$('.popup-wrapper').addClass('active');
 			$('.popup-wrapper').fadeOut('fast');
 			$('header').removeClass('open');
 			$('body').addClass('hidden');
@@ -127,6 +125,7 @@ var common = {
 		
 		$('.popup-close').click(function(){
 			$(this).closest('.popup-wrapper').fadeOut('fast');
+			$('.popup-wrapper').removeClass('active');
 			$('body').removeClass('hidden');
 		})
 

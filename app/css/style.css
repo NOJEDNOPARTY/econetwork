@@ -1024,16 +1024,27 @@ header.open {
   header.open .header-mob-triggers .nav-trigger img.nav-open {
     display: block; }
 
-header.fixed .header-navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 7;
-  box-shadow: 0 0 10px lightgray; }
+@media (min-width: 993px) {
+  header.fixed .header-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 7;
+    box-shadow: 0 0 10px lightgray; }
+  header.out .header-navigation {
+    transform: translateY(calc(-100% - 15px)); } }
 
-header.out .header-navigation {
-  transform: translateY(calc(-100% - 15px)); }
+@media (max-width: 992px) {
+  header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 7;
+    box-shadow: 0 0 10px lightgray; }
+  header.out {
+    transform: translateY(calc(-100% - 15px)); } }
 
 .banner {
   padding: 20px 0 16px; }
