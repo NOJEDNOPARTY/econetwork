@@ -1,7 +1,16 @@
 .catalog {
-    &-preview {padding-bottom: 33px;}
+    &-preview {
+        padding-bottom: 33px;
+        @media (max-width: 767px) {padding-bottom: 27px;}
+    }
     &-head {
-        .title {margin-bottom: 30px;}
+        .wrapper {
+            @media (max-width: 767px) {padding: 0;}
+        }
+        .title {
+            margin-bottom: 30px;
+            @media (max-width: 767px) {margin-bottom: 35px;}
+        }
     }
     &-list {
         display: flex;
@@ -22,6 +31,7 @@
         border-radius: 15px;
         transition: 0.3s ease;
         overflow: hidden;
+        @media (max-width: 767px) {margin-bottom: 14px;}
         &:hover {box-shadow: 0 0 20px #ebebeb;}
         &-img {
             display: block;

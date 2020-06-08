@@ -1,5 +1,6 @@
 .banner {
     padding: 20px 0 16px;
+    @media (max-width: 767px) {padding: 20px 0 23px;}
     & .wrapper {
         padding-left: 162px;
         @media (max-width: 1470px) {
@@ -11,10 +12,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: 600px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
         &-cnt {
             width: 100%;
             max-width: 580px;
             padding-right: 15px;
+            @media (max-width: 600px) {
+                padding: 0;
+                order: 2;
+            }
         }
     }
     &-img {
@@ -24,6 +33,11 @@
         @media (max-width: 1470px) {
             max-width: 360px;
             height: auto;
+        }
+        @media (max-width: 600px) {
+            order: 1;
+            margin: 0 auto 15px;
+            max-width: 260px;
         }
         & img {width: 100%;display: none;}
     }
@@ -38,6 +52,10 @@
             font-size: 32px;
             line-height: 42px;
         }
+        @media (max-width: 992px) {
+            font-size: 21px;
+            line-height: 26px;
+        }
     }
 }
 
@@ -49,6 +67,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    @media (max-width: 767px) {display: none;}
     & .owl-dot {
         display: block;
         width: 100%;

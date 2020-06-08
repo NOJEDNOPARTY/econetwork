@@ -1,13 +1,20 @@
 .benefits {
     padding: 0 0 97px;
+    @media (max-width: 992px) {padding-bottom: 52px;}
     &-list {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: 992px) {
+            flex-flow: row wrap;
+        }
         & .bnf {
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            @media (max-width: 992px) {
+                &:not(:last-child) {margin-bottom: 20px;}
+            }
             &-icon {
                 display: flex;
                 align-items: center;
@@ -32,6 +39,10 @@
                 @media (max-width: 1170px)  {
                     font-size: 14px;
                     line-height: 18px;
+                }
+                @media (max-width: 992px)  {
+                    font-size: 16px;
+                    line-height: 21px;
                 }
             }
         }

@@ -1,9 +1,15 @@
 .sections {
     padding-bottom: 100px;
+    @media (max-width: 992px) {padding-bottom: 73px;}
     &-list {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        @media (max-width: 992px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
     }
     &-item {
         display: flex;
@@ -16,11 +22,26 @@
         background-repeat: no-repeat;
         background-size: 100% 294px;
         background-position: center;
-        &:not(:last-child) {margin-right: 10px;}
+        @media (max-width: 992px) {
+            padding-right: 10px;
+            background-size: 100% 250px;
+            background-position: top center;
+        }
+        @media (max-width: 767px) {
+            padding-right: 0;
+            background-size: 100% 174px;
+        }
+        &:not(:last-child) {
+            margin-right: 10px;
+            @media (max-width: 992px) {margin:  0 0 50px;}
+            @media (max-width: 767px) {margin:  0 0 22px;}
+        }
     }
     &-cnt {
         padding: 134px 15px 20px 50px;
         @media (max-width: 1600px) {padding: 50px 15px 20px 15px;}
+        @media (max-width: 992px) {padding: 70px 15px 20px 25px;}
+        @media (max-width: 767px) {padding: 23px 0 15px 20px;}
     }
     &-title {
         display: block;
@@ -36,6 +57,11 @@
             font-size: 20px;
             line-height: 20px;
         }
+        @media (max-width: 767px) {
+            margin-bottom: 6px;
+            font-size: 16px;
+            line-height: 16px;
+        }
         &:hover {color: #8dc63f;}
     }
     &-links {
@@ -47,9 +73,13 @@
             line-height: 14px;
             color: #4c4c4c;
             transition: 0.3s ease;
-            &:not(:last-child) {margin-right: 20px;}
+            &:not(:last-child) {
+                margin-right: 20px;
+                @media (max-width: 600px) {margin-right: 0;}
+            }
             &:hover {color: #8dc63f;}
-            @media (max-width: 1270px) {margin-bottom: 10px;}
+            @media (max-width: 1270px) {margin-bottom: 7px;}
+            @media (max-width: 600px) {display: block;}
         }
     }
     &-img {
@@ -57,7 +87,17 @@
         align-items: center;
         height: 100%;
         max-width: 300px;
-        & img {max-width: 100%;}
+        & img {
+            max-width: 100%;
+            @media (max-width: 767px) {max-height: 210px;}
+        }
         @media (max-width: 1600px) {max-width: 200px;}
+        @media (max-width: 992px) {max-width: 300px;}
+        @media (max-width: 767px) {
+            justify-content: center;
+            width: 100%;
+            max-width: 155px;
+        }
+        @media (max-width: 359px) {max-width: 115px;}
     }
 }

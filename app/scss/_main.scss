@@ -28,6 +28,12 @@ body {
     text-transform: uppercase;
     border-radius: 25px;
     transition: 0.3s ease;
+    @media (max-width: 767px) {
+        max-width: 127px;
+        height: 33px;
+        font-size: 10px;
+        line-height: 33px;
+    }
 }
 
 .btn:hover {background-color: #6ca954;}
@@ -41,6 +47,10 @@ body {
     text-transform: uppercase;
     color: #4c4c4c;
     @media (max-width: 1150px) {margin-bottom: 50px;}
+    @media (max-width: 992px) {
+        font-size: 32px;
+        line-height: 32px;
+    }
 }
 
 .tab-cnt {display: none;}
@@ -52,6 +62,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding-bottom: 69px;
+    @media (max-width: 992px) {padding-bottom: 35px;}
     & a {
         position: relative;
         display: inline-block;
@@ -62,6 +73,11 @@ body {
         text-transform: uppercase;
         color: #4c4c4c;
         transition: 0.3s ease;
+        @media (max-width: 992px) {
+            font-size: 15px;
+            line-height: 15px;
+        }
+        @media (max-width: 767px) {padding-bottom: 7px;}
         &::before {
             content: '';
             position: absolute;
@@ -73,8 +89,12 @@ body {
             background-color: #8dc63f;
             opacity: 0;
             transition: 0.3s ease;
+            @media (max-width: 767px) {height: 3px;}
         }
-        &:not(:last-child) {margin-right: 32px;}
+        &:not(:last-child) {
+            margin-right: 32px;
+            @media (max-width: 992px) {margin-right: 15px;}
+        }
         &:hover,
         &.active {
             color: #8dc63f;
@@ -257,6 +277,10 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+    @media (max-width: 440px) {
+        align-items: flex-start;
+        padding: 20px;
+    }
 	background: rgba(0, 0, 0, 0.4);
 }
 
@@ -266,6 +290,9 @@ body {
   max-width: 393px;
   padding: 45px 30px;
   background-color: #ffffff;
+  @media (max-width: 440px) {
+      padding: 50px 15px;
+  }
 }
 
 .popup-title {
