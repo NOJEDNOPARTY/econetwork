@@ -2,8 +2,11 @@
     padding: 120px 0 115px;
     background-color: #F8F8F8;  
     @media (max-width: 992px) {
-        padding: 45px 0;
+        padding: 84px 0 76px;
     }  
+    .wrapper {
+        @media (max-width: 992px) {padding: 0 20px 0 37px;}
+    }
     &-titles {
         position: relative;
         padding-left: 43px;
@@ -14,15 +17,19 @@
             left: -60px;
             width: 100%;
             max-width: 133px;
-            @media (max-width: 1150px) {left: 0;}
+            @media (max-width: 1150px) {
+                left: -20px;
+                top: -30px;
+            }
         }
         & .title {
             margin-bottom: 17px;
             font-size: 44px;
             line-height: 44px;
+            @media (max-width: 992px) {padding-left: 83px;}
             @media (max-width: 992px) {
                 font-size: 32px;
-                line-height: 32px;
+                line-height: 36px;
             }
         }
     }
@@ -33,9 +40,9 @@
         line-height: 28px;
         color: #4c4c4c;
         @media (max-width: 992px) {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             font-size: 16px;
-            line-height: 18px;
+            line-height: 19px;
         }
     }
     & form {
@@ -47,7 +54,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-bottom: 32px;
             @media (max-width: 992px) {
                 flex-direction: column;
                 align-items: flex-start;
@@ -56,14 +62,18 @@
                 width: 100%;
                 max-width: 488px;
                 @media (max-width: 992px) {
-                    margin-bottom: 20px;
+                    margin-bottom: 67px;
                 }
             }
             & p {
+                padding-bottom: 45px;
                 font-family: 'Gilroy Regular';
                 font-size: 16px;
                 line-height: 16px;
                 color: #4c4c4c;
+                @media (max-width: 992px) {
+                    padding-bottom: 0;
+                }
                 & a {
                     font-family: 'Gilroy Black';
                     font-size: 21px;
@@ -86,12 +96,7 @@
             max-width: 176px;
             height: 45px;
             line-height: 45px;
-            @media (max-width: 767px) {
-                max-width: 127px;
-                height: 33px;
-                font-size: 10px;
-                line-height: 33px;
-            }
+            margin-top: 32px;
         }
     }
 }

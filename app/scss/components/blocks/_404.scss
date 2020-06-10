@@ -1,0 +1,40 @@
+.error-page {
+    padding: 134px 0 400px;
+    background-image: url(../images/404.png);
+    background-repeat: no-repeat;
+    background-position: top 289px right 141px;
+    @media (max-width: 992px) {
+        background: none;
+        padding: 0;
+    }
+    & p {
+        padding-left: 67px;
+        margin-bottom: 36px;
+        font-family: 'Gilroy Light';
+        font-size: 14px;
+        line-height: 20px;
+        color: #292929;
+        @media (max-width: 1150px) {padding-left: 0;}
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+    }
+    & h1 {
+        padding-left: 64px;
+        font-family: 'Gilroy Black';
+        font-size: 159px;
+        line-height: 125px;
+        color: #f0f0f0;
+        @media (max-width: 1150px) {padding-left: 0;}
+        @media (max-width: 992px) {
+            font-size: 100px;
+            line-height: 78px;
+            text-align: center;
+        }
+        & span {
+            display: block;
+            font-size: 72px;
+            line-height: 88px;
+        }
+    }
+}
