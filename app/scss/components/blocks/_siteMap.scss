@@ -1,0 +1,73 @@
+.website-map {
+    padding-bottom: 70px;
+    & .title {margin-bottom: 33px;}
+}
+
+.map-item {
+    &:not(.map-item-category) {padding-bottom: 17px;}
+    & .map-item-title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 12px;
+        & span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px ;
+            & img {
+                width: 100%;
+                &.minus-icon {display: none;}
+                &.plus-icon {display: block;}
+            }
+        }
+        & a {
+            font-family: 'Gilroy Bold';
+            font-size: 21px;
+            line-height: 21px;
+            color: #4d4d4d;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+            &:hover {color: #8dc63f;}
+        }
+    }
+    &-category {
+        &.open-double {padding-bottom: 22px;}
+        & .map-item-title {
+            & a {
+                font-family: 'Gilroy Regular';
+                font-size: 18px;
+                line-height: 18px;
+            }
+        }
+    }
+    &-links {
+        padding-left: 25px;
+        & a {
+            display: block;
+            margin-bottom: 13px;
+            font-family: 'Gilroy Regular';
+            font-size: 14px;
+            line-height: 14px;
+            color: #4c4c4c;
+            transition: 0.3s ease;
+            &:hover {color: #8dc63f;}
+        }
+    }
+    &-single {
+        padding-left: 25px;
+    }
+    &.open > .map-item-title span img.minus-icon,
+    &.open-double > .map-item-title span img.minus-icon {display: block;}
+    &.open > .map-item-title span img.plus-icon,
+    &.open-double > .map-item-title span img.plus-icon {display: none;}
+}
+
+.row-hidden {
+    &-cnt {display: none;}
+    &.open:not(.row-hidden-cnt) > .row-hidden-cnt {display: block;}
+    &.open-double.row-hidden-cnt > .row-hidden-cnt {display: block;}
+}

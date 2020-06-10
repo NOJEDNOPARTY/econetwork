@@ -2,6 +2,21 @@ body {
     &.hidden {overflow: hidden;}
 }
 
+
+// fixed header  and footer
+
+html, body {height: 100%;}
+.main-wrapper {	
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.main {
+    flex: 1 0 auto;
+    @media (max-width: 992px) {padding-top: 30px;}
+}
+footer {flex: 0 0 auto;}
+
 .wrapper {
     width: 100%;
     max-width: 1180px;
@@ -40,16 +55,16 @@ body {
 
 .title {
     display: block;
-    margin-bottom: 90px;
+    margin-bottom: 80px;
     font-family: 'Gilroy Black';
     font-size: 45px;
-    line-height: 45px;
+    line-height: 55px;
     text-transform: uppercase;
     color: #4c4c4c;
     @media (max-width: 1150px) {margin-bottom: 50px;}
     @media (max-width: 992px) {
         font-size: 32px;
-        line-height: 32px;
+        line-height: 42px;
     }
 }
 
@@ -110,6 +125,7 @@ body {
     right: 40px;
     z-index: 6;
     display: none;
+    @media (max-width: 992px) {display: none !important;}
     & svg {
         background: #ffffff;
         border-radius: 50%;
@@ -133,7 +149,7 @@ body {
     background-color: #f8f8f8;
     box-shadow: 0 0 15px #eaeaea;
     @media (max-width: 1170px) {padding: 15px;}
-    @media (max-width: 992px) {display: none;}
+    @media (max-width: 767px) {display: none;}
     & svg {
         & path {
             fill: #8dc63f;
@@ -175,7 +191,6 @@ body {
     bottom: 20px;
     z-index: 7;
     cursor: pointer;
-    @media (max-width: 992px) {display: none;}
     &-img {
         display: flex;
         align-items: center;
@@ -219,13 +234,26 @@ body {
             margin-bottom: 10px;
             &:hover {background-color: #6ca954;}
             &.caller-phone img {
-                width: 25px;
+                width: 26px;
                 height: 25px;
             }
             &.caller-message img {
-                width: 28px;
-                height: 26px;
+                width: 29px;
+                height: 27px;
             }
+        }
+    }
+    @media (max-width: 992px) {
+        z-index: 5;
+        left: 15px;
+        & .caller-img {
+            width: 50px;
+            height: 50px;
+            & .caller-img-icon.caller-open {
+                width: 28px;
+                height: 24px;
+            }
+
         }
     }
     &.open {
@@ -247,6 +275,20 @@ body {
                 width: 65px;
                 height: 65px;
                 opacity: 1;
+            }
+        }
+    }
+    @media (max-width: 992px) {
+        &.open .caller-hidden a {
+            width: 35px;
+            height: 35px;
+            &.caller-phone img {
+                width: 17px;
+                height: 17px;
+            }
+            &.caller-message  img {
+                width: 18px;
+                height: 15px;
             }
         }
     }
@@ -313,8 +355,11 @@ body {
     line-height: 16px;
     text-transform: uppercase;
     color: #999999;
+    border-radius: 0 !important;
     border-bottom: 1px solid #999999;
+    background-color: transparent;
     transition: 0.3s ease;
+    &.error {border-bottom: 1px solid red;}
     &:not(:last-child) {margin-bottom: 17px;}
     &:focus {border-bottom: 1px solid #8dc63f;}
 }
@@ -337,3 +382,30 @@ body {
 }
 
 .popup-close img {width: 100%;}
+
+.more-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 14px;
+    font-family: 'Gilroy Bold';
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #8dc63f;
+    @media (max-width: 767px) {display: flex;}
+    & img {
+        width: 18px;
+        height: 20px;
+        margin-left: 10px;
+        transition: 0.3s ease;
+    }
+    &.active {
+        & img {transform: rotate(180deg);}
+    }
+}
+
+.more-cnt .more-cnt-item:nth-child(n+5) {display: none;}
+
+.more-cnt.more-active .more-cnt-item:nth-child(n+5) {display: block;}

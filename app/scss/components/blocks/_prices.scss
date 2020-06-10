@@ -18,7 +18,9 @@
             max-width: 150px;
             margin: 0 0 32px;
         }
+        @media (max-width: 359px) {max-width: 135px;}
         &:hover .price-name {color: #8dc63f;}
+        &:hover .price-img img {transform: translateY(-26px);}
     }
     & .price-img {
         position: relative;
@@ -37,6 +39,7 @@
             position: absolute;
             bottom: -15px;
             right: 15px;
+            transition: 0.2s linear;
             @media (max-width: 860px) {max-height: 120px;}
         }
     }

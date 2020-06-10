@@ -1,0 +1,97 @@
+.questions {
+    padding: 120px 0 115px;
+    background-color: #F8F8F8;  
+    @media (max-width: 992px) {
+        padding: 45px 0;
+    }  
+    &-titles {
+        position: relative;
+        padding-left: 43px;
+        @media (max-width: 1150px) {padding-left: 0;}
+        & img {
+            position: absolute;
+            top: 0px;
+            left: -60px;
+            width: 100%;
+            max-width: 133px;
+            @media (max-width: 1150px) {left: 0;}
+        }
+        & .title {
+            margin-bottom: 17px;
+            font-size: 44px;
+            line-height: 44px;
+            @media (max-width: 992px) {
+                font-size: 32px;
+                line-height: 32px;
+            }
+        }
+    }
+    &-subtitle {
+        margin-bottom: 49px;
+        font-family: 'Gilroy Bold';
+        font-size: 21px;
+        line-height: 28px;
+        color: #4c4c4c;
+        @media (max-width: 992px) {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+    & form {
+        width: 100%;
+        padding-left: 43px;
+        @media (max-width: 1150px) {padding-left: 0;}
+        & .field {max-width: 488px;}
+        & .questions-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 32px;
+            @media (max-width: 992px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            & .questions-fields {
+                width: 100%;
+                max-width: 488px;
+                @media (max-width: 992px) {
+                    margin-bottom: 20px;
+                }
+            }
+            & p {
+                font-family: 'Gilroy Regular';
+                font-size: 16px;
+                line-height: 16px;
+                color: #4c4c4c;
+                & a {
+                    font-family: 'Gilroy Black';
+                    font-size: 21px;
+                    line-height: 21px;
+                    color: #4c4c4c;
+                    border-bottom: 1px solid #4c4c4c;
+                    transition: 0.3s ease;
+                    @media (max-width: 480px) {
+                        display: inline-block;
+                        margin-top: 10px;
+                    }
+                    &:hover {
+                        color: #8dc63f;
+                        border-bottom: 1px solid #8dc63f;
+                    }
+                }
+            }
+        }
+        & .btn {
+            max-width: 176px;
+            height: 45px;
+            line-height: 45px;
+            @media (max-width: 767px) {
+                max-width: 127px;
+                height: 33px;
+                font-size: 10px;
+                line-height: 33px;
+            }
+        }
+    }
+}

@@ -1,0 +1,140 @@
+.stocks {
+    padding-bottom: 100px;
+    & .title {margin-bottom: 39px;}
+    @media (max-width: 992px) {padding-bottom: 50px;}
+    &-preview {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        @media (max-width: 767px) {justify-content: space-around;}
+        &-item {
+            width: 100%;
+            max-width: 547px;
+            margin-bottom: 20px;
+            background-color: #f8f8f8;
+            @media (max-width: 1150px) {
+                max-width: 460px;
+            }
+            @media (max-width: 992px)  {max-width: 350px;}
+            &-img {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                height: 254px;
+                @media (max-width: 1150px) {height: 210px; }
+                @media (max-width: 992px)  {height: 160px;}
+                @media (max-width: 400px) {
+                    height: auto;
+                    min-height: 130px;
+                } 
+                & img {width: 100%;}
+            }
+            &-cnt {
+                position: relative;
+                height: 225px;
+                padding: 27px 38px 25px;
+                @media (max-width: 1150px) {
+                    padding: 27px 15px 25px;
+                }
+                @media (max-width: 992px)  {height: 200px;}
+            }
+            &-title {
+                display: -webkit-box;
+                width: 100%;
+                min-height: 28px;
+                max-height: 84px;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                margin-bottom: 15px;
+                font-family: 'Gilroy Black';
+                font-size: 21px;
+                line-height: 28px;
+                text-transform: uppercase;
+                color: #4c4c4c;
+                transition: 0.3s ease;
+                @media (max-width: 992px) {
+                    min-height: 22px;
+                    max-height: 66px;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                &:hover {color: #8dc63f;}
+            }
+            & p {
+                display: -webkit-box;
+                width: 100%;
+                height: 40px;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                font-family: 'Gilroy Regular';
+                font-size: 16px;
+                line-height: 20px;
+                color: #4c4c4c;
+            }
+            &-more {
+                position: absolute;
+                bottom: 26px;
+                left: 40px;
+                font-family: 'Gilroy Bold';
+                font-size: 14px;
+                line-height: 15px;
+                text-transform: uppercase;
+                color: #8dc63f;
+                transition: 0.3s ease;
+                border-bottom: 1px solid #8dc63f;
+                transition: 0.3s ease;
+                @media (max-width: 1150px) {
+                    left: 17px;
+                }
+                &:hover {color: #6ca954;}
+            }
+        }
+    }
+    &-article {
+        & img {
+            width: 100%;
+            max-width: 440px;
+            margin-right: 22px;
+            margin-bottom: 35px;
+            @media (max-width: 992px) {max-width: 310px;}
+            @media (max-width: 767px) {margin: 0 auto 35px;}
+        }
+    }
+}
+
+.article {
+    & .title {
+        font-size: 41px;
+        line-height: 51px;
+        @media (max-width: 992px) {
+            font-size: 32px;
+            line-height: 42px;
+        }
+    }
+    &-img-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media (max-width: 992px) {flex-flow: row wrap;}
+    }
+    & p,
+    & a {
+        font-family: 'Gilroy Regular';
+        font-size: 16px;
+        line-height: 26px;
+        color: #737373;
+        transition: 0.3s ease;
+        &:not(:last-child) {margin-bottom: 40px;}
+    }
+    &-date {
+        display: block;
+        text-align: right;
+        font-style: italic;
+        transition: 0.3s ease;
+        &:hover {color: #8dc63f;}
+    }
+}

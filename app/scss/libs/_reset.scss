@@ -143,6 +143,7 @@ input[type=button],
 input[type=submit],
 button {
 	cursor: pointer;
+	-webkit-appearance: none;
 }
 
 button {
@@ -156,6 +157,7 @@ button {
 a {
 	text-decoration: none;
 	color: black;
+	-webkit-appearance: none;
 }
 
 button::-moz-focus-inner,

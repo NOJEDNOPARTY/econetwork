@@ -26,6 +26,7 @@
                 background-color: #f8f8f8;
                 border-radius: 50%;
                 & img {max-width: 46px;}
+                & img.bnf-icon-4 {max-width: 33px;}
                 @media (max-width: 1170px)  {
                     margin-right: 10px;
                 }

@@ -1,6 +1,6 @@
 .header-triggers {
     padding: 25px 0;
-    background-color: #ebebeb;
+    background-color: #F8F8F8;
     @media (max-width: 992px) {padding: 19px 0 0;}
     & .wrapper {
         display: flex;
@@ -29,7 +29,7 @@
 }
 
 .header-nav-wrap {
-    background-color: #ebebeb;
+    background-color: #F8F8F8;
     @media (max-width: 992px) {display: none;}
 }
 
@@ -47,7 +47,7 @@
         padding-right: 15px;
         font-family: 'Gilroy Regular';
         font-size: 15px;
-        line-height: 15px;
+        line-height: 40px;
         color: #b1b1b1;
         text-transform: uppercase;
         &::-webkit-input-placeholder {color: #b1b1b1;}
@@ -59,7 +59,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 14px;
+        padding: 0 14px;
         height: 40px;
         background: transparent;
         & img {
@@ -116,7 +116,7 @@
         max-width: 320px;
         margin: 0 auto;
         padding: 0 0 90px;
-        background-color: #ebebeb;
+        background-color: #F8F8F8;
     }
     .wrapper {
         display: flex;
@@ -304,7 +304,7 @@ nav {
     justify-content: space-between;
     width: 100%;
     padding: 15px 20px 25px;
-    background-color: #ebebeb;
+    background-color: #F8F8F8;
     @media (min-width: 993px) {display: none;}
     & .logo {
         width: 100%;
@@ -349,7 +349,12 @@ header {
         overflow: scroll;
         z-index: 7;
         background-color: #ebebeb;
-        .header-nav-wrap {display: block;}
+        .header-nav-wrap {
+            display: block;
+            padding-bottom: 80px;
+            overflow: scroll;
+            height: 100%;
+        }
         & .header-mob {
             &-triggers {
                 & .nav-trigger {

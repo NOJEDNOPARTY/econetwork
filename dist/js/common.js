@@ -4,6 +4,7 @@ var common = {
 		common.fixNavigation();
 		common.main();
 		common.carousel();
+		common.submitForm();
 	},
 	scrollTop: function(){
 		var btnTop = $('#topBtn');
@@ -33,7 +34,7 @@ var common = {
 		scrollPrev = 0;
 		function fixNav(){
 			var scrolled = $(window).scrollTop();
-			if(scrolled <= header.outerHeight()) {
+			if(scrolled == 0) {
 				header.removeClass('out');
 				header.removeClass('fixed');
 				$('body').css('margin-top', 0);
@@ -54,14 +55,22 @@ var common = {
 		
 
 		$(window).scroll(function() {	
-			if($(window).width() < 993) {
-				fixNav();
-			}else {
-				
-			}
+			fixNav();
 		});
 	},
 	main: function(){
+
+
+		$('.row-hidden-trigger').click(function(e){
+			e.preventDefault();
+			var rowHidden = $(this).closest('.row-hidden');
+			if(rowHidden.hasClass('row-hidden-cnt') == false) {
+				rowHidden.toggleClass('open');
+				rowHidden.find('.row-hidden-cnt').removeClass('open-double');
+			}else {
+				rowHidden.toggleClass('open-double');
+			}
+		});
 
 		if($(window).width() < 993) {
 			$('.menu-hidden-title').click(function(){
@@ -78,11 +87,27 @@ var common = {
 			$('.menu-hidden-trigger').hover(function(){
 				$(this).find('.menu-hidden-wrapper').fadeToggle('fast');
 			});
+			$('.caller').hover(function(){
+				$(this).toggleClass('open')
+			});
+		}else {
+			$('.caller').click(function(){
+				$(this).toggleClass('open')
+			});
+			$('.more-btn').click(function(e){
+				e.preventDefault()
+				if($(this).hasClass('active') == false) {
+					$(this).addClass('active');
+					$(this).closest('.more-cnt').addClass('more-active');
+					$(this).find('span').text('скрыть');
+				}else {
+					$(this).removeClass('active');
+					$(this).closest('.more-cnt').removeClass('more-active');
+					$(this).find('span').text('Показать еще');
+				}
+			});
 		}
 
-		$('.caller').hover(function(){
-			$(this).toggleClass('open')
-		});
 
 		$('.item-trigger').click(function(){
 			$(this).toggleClass('active');
@@ -147,6 +172,8 @@ var common = {
 		// $('.menu-mob-close').click(function(){
 		// 	$('.header').removeClass('open');
 		// });
+
+		$('.phone-mask').mask("+380(99) 999-99-99");
 	},
 	carousel: function(){
 
@@ -159,11 +186,29 @@ var common = {
 			autoplay:true,
 			autoplayTimeout:5000,
 			autoplayHoverPause:true,
-			animateOut: 'fadeIn',
-			animateIn: 'fadeIn',
 		});
 						
 	},
+	submitForm: function() {
+		$("form").submit(function(event){
+			event.preventDefault();
+			formField = $(this).find(".field")
+			
+			formField.each(function(){
+				var thisEl = $(this);
+				if (! thisEl.val().length) {
+					thisEl.addClass('error')
+					setTimeout(function(){
+						thisEl.removeClass('error')
+					}, 3000)
+					thisEl.addClass('form-error')
+				}else { thisEl.removeClass('form-error')}
+			});	
+			if(formField.hasClass('form-error') == false){
+				document.location.href = "./thanks.html";
+			}
+		});
+	}
 };
 
 (function() {

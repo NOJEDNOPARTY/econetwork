@@ -65,6 +65,11 @@
                     line-height: 16px;
                 }
             }
+            & span.socials-links-title {margin-bottom: 25px;}
+        }
+        & .footer-adress {
+            line-height: 18px;
+            &:not(:last-child) {margin-bottom: 15px;}
         }
     }
 }
