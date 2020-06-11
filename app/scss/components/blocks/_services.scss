@@ -12,7 +12,12 @@
             width: 100%;
             max-width: 555px;
             margin-bottom: 20px;
-            background-color: #F8F8F8;
+            background-image: url('../images/gray-bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% calc(100% - 6px);
+            // background-color: #F8F8F8;
             @media (max-width: 1155px) {max-width: 465px;}
             @media (max-width: 992px) {max-width: 355px;}
             @media (max-width: 400px) {

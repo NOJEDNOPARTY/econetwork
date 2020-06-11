@@ -112,6 +112,15 @@ var common = {
 		$('.item-trigger').click(function(){
 			$(this).toggleClass('active');
 		});
+		$('.delete-favorite').click(function(e){
+			e.preventDefault();
+			var list = $(this).closest('.catalog-list');
+			$(this).closest('.catalog-item').remove();
+			if($('.favorites .catalog-item').length == 0) {
+				console.log('11')
+				list.addClass('no-cnt');
+			}
+		});
 
 		$('.tabs-section a').click(function(e){
 			e.preventDefault();
@@ -140,18 +149,26 @@ var common = {
 		$('.call-popup').click(function(event){
 			event.preventDefault();
 			var popup  = '#' + $(this).attr('data-popup');
+			if($(this).closest('.catalog-item')) {
+				var popupText = $(this).closest('.catalog-item').find('.catalog-item-title').text();
+				$('#oneClick').find('.popup-title span').text('');
+				$(popup).find('.popup-title span').text(popupText);
+			}
 			$('.popup-wrapper').addClass('active');
-			$('.popup-wrapper').fadeOut('fast');
+			$('.popup-wrapper').hide();
 			$('header').removeClass('open');
+			setTimeout(function(){
+				$('.caller').removeClass('open');
+			}, 100)
 			$('body').addClass('hidden');
-			$(popup).fadeIn('fast');
+			$(popup).show();
 		});
 
 		
 		$('.popup-close').click(function(){
-			$(this).closest('.popup-wrapper').fadeOut('fast');
-			$('.popup-wrapper').removeClass('active');
 			$('body').removeClass('hidden');
+			$(this).closest('.popup-wrapper').hide();
+			$('.popup-wrapper').removeClass('active');
 		})
 
 		// var bLazy = new Blazy({});
@@ -173,7 +190,7 @@ var common = {
 		// 	$('.header').removeClass('open');
 		// });
 
-		$('.phone-mask').mask("+380(99) 999-99-99");
+		$('.phone-mask').mask("+7(999) 999-99-99");
 	},
 	carousel: function(){
 
@@ -192,7 +209,7 @@ var common = {
 	submitForm: function() {
 		$("form").submit(function(event){
 			event.preventDefault();
-			formField = $(this).find(".field")
+			formField = $(this).find(".field:not(.field-norequired)")
 			
 			formField.each(function(){
 				var thisEl = $(this);

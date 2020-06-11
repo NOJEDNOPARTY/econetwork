@@ -4,12 +4,12 @@
 }
 
 .map-item {
-    &:not(.map-item-category) {padding-bottom: 17px;}
+    &:not(.map-item-category) {padding-bottom: 20px;}
     & .map-item-title {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        margin-bottom: 12px;
+        margin-bottom: 20px;
         & span {
             display: flex;
             align-items: center;
@@ -48,7 +48,7 @@
         padding-left: 25px;
         & a {
             display: block;
-            margin-bottom: 13px;
+            margin-bottom: 20px;
             font-family: 'Gilroy Regular';
             font-size: 14px;
             line-height: 14px;

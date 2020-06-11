@@ -49,11 +49,22 @@
         font-size: 15px;
         line-height: 40px;
         color: #b1b1b1;
-        text-transform: uppercase;
-        &::-webkit-input-placeholder {color: #b1b1b1;}
-        &::-moz-placeholder  {color: #b1b1b1;}
-        &:-ms-input-placeholder  {color: #b1b1b1;}
-        &:-moz-placeholder  {color: #b1b1b1;}
+        &::-webkit-input-placeholder {
+            text-transform: uppercase;
+            color: #b1b1b1;
+        }
+        &::-moz-placeholder  {
+            text-transform: uppercase;
+            color: #b1b1b1;
+        }
+        &:-ms-input-placeholder  {
+            text-transform: uppercase;
+            color: #b1b1b1;
+        }
+        &:-moz-placeholder  {
+            text-transform: uppercase;
+            color: #b1b1b1;
+        }
     }
     & button {
         display: flex;
@@ -251,7 +262,7 @@ nav {
             }
             li {
                 @media (max-width: 992px) {
-                    margin: 0 0 13px !important;
+                    margin: 0 0 20px !important;
                     &:not(.menu-hidden-title) {display: none;}
                 }
                 & a {
@@ -346,14 +357,14 @@ header {
         left: 0;
         width: 100%;
         height: 100vh;
-        overflow: scroll;
+        overflow: hidden;
         z-index: 7;
         background-color: #ebebeb;
         .header-nav-wrap {
             display: block;
             padding-bottom: 80px;
             overflow: scroll;
-            height: 100%;
+            height: calc(100vh - 90px);
         }
         & .header-mob {
             &-triggers {

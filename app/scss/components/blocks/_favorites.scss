@@ -1,0 +1,39 @@
+.favorites {
+    padding-bottom: 70px;
+    & .wrapper {
+        .wrapper {
+            padding: 0;
+            max-width: 1140px;
+        }
+    }
+    & .catalog-list {
+        justify-content: flex-start;
+        & .no-more-cnt {
+            display: none;
+            font-family: 'Gilroy Regular';
+            font-size: 20px;
+            line-height: 24px;
+            color: #464646;
+        }
+        &.no-cnt {
+            .no-more-cnt {display: block;}
+        }
+        @media (max-width: 680px) {justify-content: space-around;}
+        & .catalog-item {
+            &:not(:last-child) {margin-right: 22px;}
+            &:nth-child(5n) {margin-right: 0;}
+            
+            @media (max-width: 1297px) {
+                &:nth-child(5n) {margin-right: 22px;}
+                &:nth-child(4n) {margin-right: 0;}
+            }
+            @media (max-width: 977px) {
+                &:nth-child(4n) {margin-right: 0;}
+                &:nth-child(3n) {margin-right: 0;}
+                &:nth-child(odd) {margin-right: 0;}
+                &:nth-child(even) {margin-right: 22px;}
+            }
+            @media (max-width: 680px) {margin-right: 0 !important;}
+        }
+    }
+}
