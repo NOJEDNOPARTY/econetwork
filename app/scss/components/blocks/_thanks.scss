@@ -7,6 +7,9 @@
         background-size: 210px 196px;
         background-repeat: no-repeat;
         background-position: center left;
+        @media (max-width: 1210px) {
+            background-position: center left 20px;
+        }
         @media (max-width: 767px) {
             padding: 40px 20px;
             background-position: top center;

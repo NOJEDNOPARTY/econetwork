@@ -139,8 +139,9 @@ var common = {
 				if (!popup.is(e.target) 
 					&& popup.has(e.target).length === 0) { 
 						if($('.popup-wrapper').hasClass('active') == true){
-							$('.popup-wrapper').fadeOut('fast');
 							$('body').removeClass('hidden');
+							$('.popup-wrapper').hide();
+							$('.popup-wrapper').removeClass('active');
 						}
 				}
 			});
@@ -171,7 +172,7 @@ var common = {
 			$('.popup-wrapper').removeClass('active');
 		})
 
-		// var bLazy = new Blazy({});
+		var bLazy = new Blazy({});
 
 		// if($(window).width() < 1025) {
 		// 	$('.nav-link-trigger').click(function(){

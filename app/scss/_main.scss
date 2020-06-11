@@ -32,6 +32,7 @@ footer {flex: 0 0 auto;}
     &.wrapper-m {max-width: 1300px;}
     &.wrapper-ml {max-width: 1460px;}
     &.wrapper-l {max-width: 1810px;}
+    &.wrapper-big {max-width: 1920px;}
 }
 
 .btn {
@@ -470,7 +471,7 @@ footer {flex: 0 0 auto;}
         max-width: 932px;
         height: auto;
         min-height: 400px;
-        margin: 25px auto 0;
+        margin: 25px auto 26px;    
         @media (max-width: 767px) {
             min-height: 180px;
         }
@@ -478,9 +479,9 @@ footer {flex: 0 0 auto;}
     & img {
         width: 100%;
         max-width: 440px;
-        margin-right: 22px;
         margin-bottom: 12px;
-        float: left;
+        &[align="right"] {margin-left: 22px;}
+        &[align="left"] {margin-right: 22px;}
         @media (max-width: 992px) {max-width: 310px;}
         @media (max-width: 767px) {
             margin: 0 auto 35px;
@@ -496,8 +497,8 @@ footer {flex: 0 0 auto;}
     }
     &-share {
         position: absolute;
-        right: -50px;
-        top: 0;
+        right: -55px;
+        top: 6px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -604,6 +605,43 @@ footer {flex: 0 0 auto;}
                 height: 10px;
                 border-radius: 50%;
                 border: 2px solid #8dc63f;
+            }
+        }
+    }
+    & ol {
+        padding: 7px 0 26px;
+        margin: 0;
+        list-style: none;
+        counter-reset: my-awesome-counter;
+        & > li {
+            position: relative;
+            padding-left: 21px;
+            font-family: 'Gilroy Regular';
+            font-size: 16px;
+            line-height: 26px;
+            color: #737373;
+            counter-increment: my-awesome-counter;
+            @media (max-width: 992px) {
+                font-size: 12px;
+                line-height: 22px;
+            }
+            & b {
+                font-family: 'Gilroy Bold';
+                font-size: 21px;
+                @media (max-width: 992px) {
+                    font-size: 16px;
+                }
+            }
+            &::before {
+                content: counter(my-awesome-counter) ".";
+                position: absolute;
+                top: 0px;
+                left: 0;
+                display: block;
+                font-family: 'Gilroy Regular';
+                font-size: 16px;
+                line-height: 26px;
+                color: #8dc63f;
             }
         }
     }
