@@ -2,6 +2,7 @@ var common = {
 	init: function() {
 		common.scrollTop();
 		common.fixNavigation();
+		common.rangeSlider();
 		common.main();
 		common.carousel();
 		common.submitForm();
@@ -58,6 +59,66 @@ var common = {
 			fixNav();
 		});
 	},
+	rangeSlider: function(){
+		var $range = $(".js-range-slider"),
+		$inputFrom = $(".js-input-from"),
+		$inputTo = $(".js-input-to"),
+		instance,
+		min = 14400,
+		max = 2011950,
+		from = 14400,
+		to = 1000000;
+	
+		$range.ionRangeSlider({
+			skin: "round",
+			type: "double",
+			min: min,
+			max: max,
+			from: from,
+			to: to,
+			onStart: updateInputs,
+			onChange: updateInputs
+		});
+		instance = $range.data("ionRangeSlider");
+		
+		function updateInputs (data) {
+			from = data.from;
+			to = data.to;
+			
+			$inputFrom.prop("value", from);
+			$inputTo.prop("value", to);	
+		}
+		
+		$inputFrom.on("input", function () {
+			var val = $(this).prop("value");
+			
+			// validate
+			if (val < min) {
+				val = min;
+			} else if (val > to) {
+				val = to;
+			}
+			
+			instance.update({
+				from: val
+			});
+		});
+		
+		$inputTo.on("input", function () {
+			var val = $(this).prop("value");
+			
+			// validate
+			if (val < from) {
+				val = from;
+			} else if (val > max) {
+				val = max;
+			}
+			
+			instance.update({
+				to: val
+			});
+		});
+	},
 	main: function(){
 
 
@@ -107,7 +168,6 @@ var common = {
 				}
 			});
 		}
-
 
 		$('.item-trigger').click(function(){
 			$(this).toggleClass('active');

@@ -764,11 +764,13 @@ footer {
   .more-btn.active img {
     transform: rotate(180deg); }
 
-.more-cnt .more-cnt-item:nth-child(n+5) {
-  display: none; }
+@media (max-width: 767px) {
+  .more-cnt .more-cnt-item:nth-child(n+5) {
+    display: none; } }
 
-.more-cnt.more-active .more-cnt-item:nth-child(n+5) {
-  display: block; }
+@media (max-width: 767px) {
+  .more-cnt.more-active .more-cnt-item:nth-child(n+5) {
+    display: block; } }
 
 .article {
   position: relative;
@@ -1868,6 +1870,210 @@ header.open {
       margin-right: 10px;
       font-size: 18px;
       line-height: 45px; }
+
+.catalog-open {
+  padding-bottom: 130px; }
+  .catalog-open .wrapper .wrapper {
+    padding: 0; }
+  .catalog-open .catalog-list-wrap {
+    width: 100%;
+    max-width: 938px; }
+    .catalog-open .catalog-list-wrap .catalog-list {
+      justify-content: flex-start;
+      width: 100%; }
+      .catalog-open .catalog-list-wrap .catalog-list .catalog-item {
+        margin-right: 22px; }
+        .catalog-open .catalog-list-wrap .catalog-list .catalog-item:nth-child(3n) {
+          margin-right: 0; }
+
+.catalog-filter-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.filter {
+  width: 100%;
+  max-width: 265px;
+  padding: 35px 10px 35px 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px; }
+  .filter-title {
+    margin-bottom: 25px;
+    font-family: 'Gilroy Black';
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #4c4c4c; }
+  .filter-item:not(:last-child) {
+    margin-bottom: 20px; }
+  .filter-item-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px; }
+    .filter-item-title p {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-family: 'Gilroy Medium';
+      font-size: 16px;
+      line-height: 16px;
+      color: #959595; }
+      .filter-item-title p span {
+        display: inline-block;
+        margin-right: 5px; }
+      .filter-item-title p svg {
+        width: 14px;
+        height: 14px; }
+        .filter-item-title p svg path {
+          transition: 0.3s ease; }
+        .filter-item-title p svg:hover path,
+        .filter-item-title p svg.active path {
+          fill: #8dc63f; }
+  .filter-item-cnt {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row wrap; }
+  .filter-item-buttons {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap !important; }
+    .filter-item-buttons .btn {
+      max-width: 103px;
+      height: 33px;
+      font-size: 14px;
+      line-height: 33px;
+      margin-right: 15px; }
+    .filter-item-buttons .btn-reset {
+      cursor: pointer;
+      font-family: 'Gilroy Bold';
+      font-size: 14px;
+      line-height: 14px;
+      color: #898989;
+      transition: 0.3s ease;
+      background: none !important;
+      outline: none !important; }
+      .filter-item-buttons .btn-reset:hover {
+        color: #8dc63f; }
+
+.checkbox-item {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%; }
+  .checkbox-item:not(:last-child) {
+    margin-bottom: 10px; }
+  .checkbox-item input {
+    display: none; }
+  .checkbox-item .checker {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-color: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    transition: 0.3s ease; }
+    .checkbox-item .checker img {
+      position: relative;
+      z-index: 2;
+      width: 9px;
+      height: 6px;
+      opacity: 0; }
+    .checkbox-item .checker::before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: -1px;
+      left: -1px;
+      display: block;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      border: 1px solid #8dc63f;
+      border-radius: 5px;
+      transition: 0.3s ease;
+      opacity: 0; }
+  .checkbox-item .checker-name {
+    font-family: 'Gilroy Medium';
+    font-size: 16px;
+    line-height: 21px;
+    color: #959595; }
+  .checkbox-item input:checked + .checker img,
+  .checkbox-item input:checked + .checker:before {
+    opacity: 1; }
+  .checkbox-item input:checked ~ .checker-name {
+    color: #8dc63f; }
+  .checkbox-item-text {
+    width: 60px;
+    min-width: 60px;
+    height: 35px;
+    margin-right: 6px; }
+    .checkbox-item-text:nth-child(3n) {
+      margin-right: 0; }
+    .checkbox-item-text .checker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      min-width: 60px;
+      height: 35px;
+      font-family: 'Gilroy Medium';
+      font-size: 14px;
+      line-height: 14px;
+      color: #959595;
+      transition: 0.3s ease; }
+    .checkbox-item-text input:checked + .checker {
+      color: #8dc63f; }
+    .checkbox-item-text:hover .checker {
+      color: #8dc63f;
+      border: 1px solid #8dc63f; }
+
+.range-slider {
+  width: 100%;
+  max-width: 195px;
+  margin-bottom: 15px; }
+  .range-slider .irs--round .irs-line {
+    top: 3px;
+    height: 2px;
+    background-color: #cccccc;
+    border-radius: 0; }
+  .range-slider .irs--round .irs-bar {
+    top: 3px;
+    height: 2px;
+    background-color: #8dc63f; }
+  .range-slider .irs--round .irs-handle.state_hover, .range-slider .irs--round .irs-handle:hover {
+    background-color: #8dc63f; }
+  .range-slider .irs--round .irs-handle {
+    top: -1px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    background-color: #8dc63f;
+    border-radius: 50%;
+    box-shadow: none; }
+  .range-slider .irs-min, .range-slider .irs-max, .range-slider .irs-from, .range-slider .irs-single, .range-slider .irs-to {
+    display: none !important; }
+  .range-slider .irs--round {
+    height: 10px; }
+  .range-slider-controls input {
+    width: 100%;
+    max-width: 95px;
+    height: 35px;
+    background: #ffffff;
+    font-family: 'Gilroy medium';
+    font-size: 14px;
+    line-height: 35px;
+    color: #c2c2c2;
+    border-radius: 5px;
+    padding: 2px 2px 2px 6px;
+    border: 1px solid #ebebeb; }
+    .range-slider-controls input:not(:last-child) {
+      margin-right: 8px; }
 
 .link-text {
   font-family: 'Gilroy Bold';
