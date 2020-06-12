@@ -97,7 +97,7 @@
         }
     }
     &-open {
-        padding-bottom: 130px;
+        padding-bottom: 90px;
         @media (max-width: 767px)  {padding-bottom: 60px;}
         .title-s {
             margin-bottom: 24px;
@@ -161,7 +161,8 @@
         }
         &.active {
             @media (max-width: 767px) {
-                .catalog-filter-trigger {border-radius: 8px 8px 0 0 ;}
+                .catalog-filter-trigger {display: none;}
+                & .catalog-filter {margin: 0 auto 30px;}
             }
         }
     }
@@ -191,15 +192,10 @@
             }
         }
         @media (max-width: 767px) {
-            position: absolute;
-            z-index: 5;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%) scale(0);
-            overflow: hidden;
+            display: none;
             width: 100%;
             max-width: 322px;
-            &.active {transform: translateX(-50%) scale(1);}
+            &.active {display: block;}
         }
     }
 }
@@ -533,6 +529,17 @@
             color: #8dc63f;
             border: 1px solid #8dc63f;
         }
+    }
+    &.disabled {
+        opacity: 0.5;
+        input:checked + .checker {color: #959595}
+        &:hover  .checker {
+            color: #959595;
+            border: 1px solid #ebebeb;
+        }    
+        & input:checked + .checker img,
+        & input:checked + .checker:before {opacity: 0;}
+        & input:checked ~ .checker-name {color: #959595;}
     }
 }
 

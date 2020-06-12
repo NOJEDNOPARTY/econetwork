@@ -728,3 +728,42 @@ footer {flex: 0 0 auto;}
   
 
   
+// pagination
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 42px;
+        @media (max-width: 767px) {justify-content: center;}
+    }
+
+    & a  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        font-family: 'Gilroy Regular';
+        font-size: 11px;
+        line-height: 11px;
+        color: #acacac;
+        transition: 0.3s ease;
+        &:not(:last-child) {margin-right: 7px;}
+        &:not(.pagination-arrow) {
+            border: 1px solid #ebebeb;
+            &:hover {
+                color: #8dc63f;
+                border: 1px solid #8dc63f;
+            }
+        }
+    }
+    &-arrow {
+        & img {width: 100%;}
+    }
+}

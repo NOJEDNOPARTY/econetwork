@@ -22,23 +22,6 @@
         </div>
         <div class="catalog-filter-section">
             <a href="#" class="catalog-filter-trigger"><img src="./images/catalogggg.svg" alt="trigger">Подбор по параметрам </a>
-            <div class="filter-sorting filter-sorting-mob">
-                <p>Сортировать по:</p>
-                <div class="custom-select">
-                    <select>
-                      <option value="0">Цене</option>
-                      <option value="1">по убыванию</option>
-                      <option value="2">по возрастанию</option>
-                    </select>
-                  </div>
-                  <div class="custom-select">
-                    <select>
-                      <option value="0">Названию</option>
-                      <option value="1">по убыванию</option>
-                      <option value="2">по возрастанию</option>
-                    </select>
-                  </div>
-            </div>
             <div class="catalog-filter">
                 <div class="filter">
                     <form action="#">
@@ -55,8 +38,8 @@
                                     <input type="text" class="js-range-slider" value="" />
                                 </div>
                                 <div class="range-slider-controls extra-controls">
-                                    <input type="text" class="js-input-from" placeholder="От 14 400" value="14400" />
-                                    <input type="text" class="js-input-to"  placeholder="До 2 011 950" value="2011950" />
+                                    <input type="number" class="js-input-from" placeholder="От 14 400" value="14400" />
+                                    <input type="number" class="js-input-to"  placeholder="До 2 011 950" value="2011950" />
                                 </div>
                             </div>
                         </div>
@@ -160,24 +143,24 @@
                                 <img src="./images/arrow-btm2.svg" alt="arrow">
                             </div>
                             <div class="filter-item-cnt">
-                                <label class="checkbox-item checkbox-item-text">
-                                    <input type="checkbox" >
+                                <label class="checkbox-item checkbox-item-text disabled">
+                                    <input type="checkbox" disabled>
                                     <span class="checker">600</span>
                                 </label>
-                                <label class="checkbox-item checkbox-item-text">
-                                    <input type="checkbox" >
+                                <label class="checkbox-item checkbox-item-text disabled">
+                                    <input type="checkbox"disabled >
                                     <span class="checker">800</span>
                                 </label>
-                                <label class="checkbox-item checkbox-item-text">
-                                    <input type="checkbox" >
+                                <label class="checkbox-item checkbox-item-text disabled">
+                                    <input type="checkbox"disabled >
                                     <span class="checker">1000</span>
                                 </label>
-                                <label class="checkbox-item checkbox-item-text">
-                                    <input type="checkbox" >
+                                <label class="checkbox-item checkbox-item-text disabled">
+                                    <input type="checkbox" disabled>
                                     <span class="checker">1200</span>
                                 </label>
-                                <label class="checkbox-item checkbox-item-text">
-                                    <input type="checkbox" >
+                                <label class="checkbox-item checkbox-item-text disabled">
+                                    <input type="checkbox" disabled>
                                     <span class="checker">1400</span>
                                 </label>
                                 <label class="checkbox-item checkbox-item-text">
@@ -383,9 +366,26 @@
                     </form>
                 </div>
             </div>
-            <div class="catalog-list-wrap more-cnt">
-                <div class="catalog-list more-cnt-list">
-                    <div class="catalog-item more-cnt-item">
+            <div class="filter-sorting filter-sorting-mob">
+                <p>Сортировать по:</p>
+                <div class="custom-select">
+                    <select>
+                      <option value="0">Цене</option>
+                      <option value="1">по убыванию</option>
+                      <option value="2">по возрастанию</option>
+                    </select>
+                  </div>
+                  <div class="custom-select">
+                    <select>
+                      <option value="0">Названию</option>
+                      <option value="1">по убыванию</option>
+                      <option value="2">по возрастанию</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="catalog-list-wrap">
+                <div class="catalog-list">
+                    <div class="catalog-item">
                         <div class="stickers">
                             <div class="sticker sticker-green">Топ</div>
                             <div class="sticker sticker-m sticker-green">Новинка</div>
@@ -444,7 +444,7 @@
                             <a href="#" class="one-click-trigger link-text call-popup" data-popup="oneClick">купить <br> в 1 клик</a>
                         </div>
                     </div>
-                    <div class="catalog-item more-cnt-item">
+                    <div class="catalog-item">
                         <div class="stickers">
                             <div class="sticker sticker-green">Топ</div>
                             <div class="sticker sticker-m sticker-green">Новинка</div>
@@ -503,7 +503,7 @@
                             <a href="#" class="one-click-trigger link-text call-popup" data-popup="oneClick">купить <br> в 1 клик</a>
                         </div>
                     </div>
-                    <div class="catalog-item more-cnt-item">
+                    <div class="catalog-item">
                         <div class="stickers">
                             <div class="sticker sticker-green">Топ</div>
                             <div class="sticker sticker-m sticker-green">Новинка</div>
@@ -562,7 +562,7 @@
                             <a href="#" class="one-click-trigger link-text call-popup" data-popup="oneClick">купить <br> в 1 клик</a>
                         </div>
                     </div>
-                    <div class="catalog-item more-cnt-item">
+                    <div class="catalog-item">
                         <div class="stickers">
                             <div class="sticker sticker-green">Топ</div>
                             <div class="sticker sticker-m sticker-green">Новинка</div>
@@ -621,7 +621,7 @@
                             <a href="#" class="one-click-trigger link-text call-popup" data-popup="oneClick">купить <br> в 1 клик</a>
                         </div>
                     </div>
-                    <div class="catalog-item more-cnt-item">
+                    <div class="catalog-item">
                         <div class="stickers">
                             <div class="sticker sticker-green">Топ</div>
                             <div class="sticker sticker-m sticker-green">Новинка</div>
@@ -680,7 +680,7 @@
                             <a href="#" class="one-click-trigger link-text call-popup" data-popup="oneClick">купить <br> в 1 клик</a>
                         </div>
                     </div>
-                    <div class="catalog-item more-cnt-item">
+                    <div class="catalog-item">
                         <div class="stickers">
                             <div class="sticker sticker-green">Топ</div>
                             <div class="sticker sticker-m sticker-green">Новинка</div>
@@ -741,6 +741,16 @@
                     </div>
                 </div>
                 <a href="#" class="more-btn"><span>показать еще</span><img src="./images/arrow-double.svg" alt="arrow"></a>
+            </div>
+        </div>
+        <div class="pagination-wrapper">
+            <div class="pagination">
+                <a class="pagination-arrow pagination-prev" href="#"><img src="./images/prev-page.png" alt="page-arrow"></a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a class="pagination-arrow pagination-next" href="#"><img src="./images/next-page.png" alt="page-arrow"></a>
             </div>
         </div>
     </div>

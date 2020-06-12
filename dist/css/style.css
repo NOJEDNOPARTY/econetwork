@@ -1051,6 +1051,40 @@ footer {
     right: 0;
     transform: translateX(0); }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
+  .pagination-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 42px; }
+    @media (max-width: 767px) {
+      .pagination-wrapper {
+        justify-content: center; } }
+  .pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-family: 'Gilroy Regular';
+    font-size: 11px;
+    line-height: 11px;
+    color: #acacac;
+    transition: 0.3s ease; }
+    .pagination a:not(:last-child) {
+      margin-right: 7px; }
+    .pagination a:not(.pagination-arrow) {
+      border: 1px solid #ebebeb; }
+      .pagination a:not(.pagination-arrow):hover {
+        color: #8dc63f;
+        border: 1px solid #8dc63f; }
+  .pagination-arrow img {
+    width: 100%; }
+
 .header-triggers {
   padding: 25px 0;
   background-color: #F8F8F8; }
@@ -1935,7 +1969,7 @@ header.open {
       line-height: 45px; }
 
 .catalog-open {
-  padding-bottom: 130px; }
+  padding-bottom: 90px; }
   @media (max-width: 767px) {
     .catalog-open {
       padding-bottom: 60px; } }
@@ -2013,7 +2047,9 @@ header.open {
       flex-direction: column; } }
   @media (max-width: 767px) {
     .catalog-filter-section.active .catalog-filter-trigger {
-      border-radius: 8px 8px 0 0; } }
+      display: none; }
+    .catalog-filter-section.active .catalog-filter {
+      margin: 0 auto 30px; } }
 
 .catalog-filter {
   margin-right: 10px; }
@@ -2044,16 +2080,11 @@ header.open {
       margin-right: 10px; }
   @media (max-width: 767px) {
     .catalog-filter {
-      position: absolute;
-      z-index: 5;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%) scale(0);
-      overflow: hidden;
+      display: none;
       width: 100%;
       max-width: 322px; }
       .catalog-filter.active {
-        transform: translateX(-50%) scale(1); } }
+        display: block; } }
 
 .filter {
   width: 100%;
@@ -2369,6 +2400,18 @@ header.open {
     .checkbox-item-text:hover .checker {
       color: #8dc63f;
       border: 1px solid #8dc63f; }
+  .checkbox-item.disabled {
+    opacity: 0.5; }
+    .checkbox-item.disabled input:checked + .checker {
+      color: #959595; }
+    .checkbox-item.disabled:hover .checker {
+      color: #959595;
+      border: 1px solid #ebebeb; }
+    .checkbox-item.disabled input:checked + .checker img,
+    .checkbox-item.disabled input:checked + .checker:before {
+      opacity: 0; }
+    .checkbox-item.disabled input:checked ~ .checker-name {
+      color: #959595; }
 
 .range-slider {
   width: 100%;
