@@ -187,6 +187,23 @@ var common = {
 		$('.item-trigger').click(function(){
 			$(this).toggleClass('active');
 		});
+
+
+		$('.cart-quantity button').click(function(e){
+			e.preventDefault();
+			var activeQuantity = $(this).closest('.quantity-row').find('input').val();
+			
+			if($(this).hasClass('quantity-plus')) {
+				$(this).closest('.quantity-row').find('input').val(Number(activeQuantity) + 1)
+			}
+			if($(this).hasClass('quantity-minus')) {
+				if(activeQuantity !== '1') {
+					$(this).closest('.quantity-row').find('input').val(Number(activeQuantity) - 1)
+				}
+			}
+		});
+
+
 		$('.filter-item-title').click(function(){
 			$(this).toggleClass('active');
 			$(this).closest('.filter-item').toggleClass('open');
@@ -203,12 +220,20 @@ var common = {
 			$(this).closest('.catalog-filter-section').find('.catalog-filter').removeClass('active');
 			$(this).closest('.catalog-filter-section').removeClass('active');
 		});
+
 		$('.delete-favorite').click(function(e){
 			e.preventDefault();
 			var list = $(this).closest('.catalog-list');
 			$(this).closest('.catalog-item').remove();
 			if($('.favorites .catalog-item').length == 0) {
-				console.log('11')
+				list.addClass('no-cnt');
+			}
+		});
+		$('.delete-cart-item').click(function(e){
+			e.preventDefault();
+			var list = $(this).closest('.cart-list');
+			$(this).closest('.cart-item').remove();
+			if($('.cart-list .cart-item').length == 0) {
 				list.addClass('no-cnt');
 			}
 		});
@@ -396,7 +421,11 @@ var common = {
 				}else { thisEl.removeClass('form-error')}
 			});	
 			if(formField.hasClass('form-error') == false){
-				document.location.href = "./thanks.html";
+				if($(this).closest('.cart').hasClass('cart') == true) {
+					document.location.href = "./checkout.html";
+				}else {
+					document.location.href = "./thanks.html";
+				}
 			}
 		});
 	}
