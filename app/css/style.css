@@ -4005,6 +4005,210 @@ header.open {
       justify-content: space-around;
       flex-flow: row wrap; } }
 
+.comparison {
+  padding-bottom: 107px; }
+  .comparison .wrapper .wrapper {
+    padding: 0; }
+  .comparison-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start; }
+    .comparison-list .delete-comparison {
+      cursor: pointer; }
+  .comparison-items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 925px; }
+    .comparison-items-wrap {
+      max-width: 925px;
+      width: 100%;
+      overflow-x: scroll;
+      padding-bottom: 5px;
+      border-radius: 15px; }
+      .comparison-items-wrap::-webkit-scrollbar {
+        width: 4px;
+        height: 4px; }
+      .comparison-items-wrap::-webkit-scrollbar-track {
+        width: 4px;
+        background-color: lightgray; }
+      .comparison-items-wrap::-webkit-scrollbar-thumb {
+        width: 4px;
+        background-color: #8dc63f; }
+  .comparison-parameters {
+    width: 100%;
+    max-width: 260px;
+    min-width: 260px; }
+    .comparison-parameters .comparison-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 17px;
+      padding-left: 18px; }
+      .comparison-parameters .comparison-top p {
+        font-family: 'Gilroy Black';
+        font-size: 16px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #4c4c4c; }
+    .comparison-parameters .comparison-row {
+      padding-left: 15px; }
+  .comparison-item {
+    min-width: 295px;
+    border: 1px solid #ebebeb;
+    border-radius: 15px;
+    padding-bottom: 15px; }
+    .comparison-item:not(:last-child) {
+      margin-right: 20px; }
+      .comparison-item:not(:last-child) .gray-row {
+        position: relative; }
+        .comparison-item:not(:last-child) .gray-row::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: calc(100% + 1px);
+          display: block;
+          width: 20px;
+          height: 100%;
+          background-color: #f8f8f8; }
+    .comparison-item .comparison-row p {
+      padding-left: 55px;
+      font-family: 'Gilroy Regular';
+      font-size: 14px;
+      line-height: 14px;
+      color: #737373; }
+  .comparison-top {
+    height: 180px;
+    width: 100%; }
+    .comparison-top-item {
+      padding: 20px 18px 20px 5px; }
+      .comparison-top-item .comparison-triggers {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 28px; }
+        .comparison-top-item .comparison-triggers .item-trigger:not(:last-child) {
+          margin-right: 10px; }
+      .comparison-top-item-cnt {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; }
+      .comparison-top-item-img {
+        width: 100%;
+        max-width: 136px;
+        margin-right: 5px; }
+        .comparison-top-item-img img {
+          max-width: 100%; }
+      .comparison-top-item-info .comparison-item-title {
+        display: block;
+        margin-bottom: 11px;
+        font-family: 'Gilroy Bold';
+        font-size: 16px;
+        line-height: 16px;
+        color: #8dc63f;
+        transition: 0.3s ease; }
+        .comparison-top-item-info .comparison-item-title:hover {
+          color: #6ca954; }
+      .comparison-top-item-info p {
+        margin-bottom: 10px;
+        font-family: 'Gilroy Bold';
+        font-size: 14px;
+        line-height: 14px;
+        color: #4c4c4c; }
+      .comparison-top-item-info div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; }
+        .comparison-top-item-info div .cart-trigger {
+          margin: 0 16px 0 0;
+          width: 23px;
+          height: 28px; }
+          .comparison-top-item-info div .cart-trigger svg {
+            width: 100%; }
+        .comparison-top-item-info div .link-text {
+          font-size: 14px;
+          line-height: 17px;
+          text-decoration: underline; }
+  .comparison-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    height: 56px; }
+    .comparison-row.gray-row {
+      background-color: #f8f8f8; }
+    .comparison-row .filter-item-info {
+      margin-left: 10px;
+      pointer-events: fill; }
+      .comparison-row .filter-item-info svg {
+        width: 14px;
+        height: 14px; }
+        .comparison-row .filter-item-info svg path {
+          transition: 0.3s ease; }
+        .comparison-row .filter-item-info svg:hover path,
+        .comparison-row .filter-item-info svg.active path {
+          fill: #8dc63f; }
+      .comparison-row .filter-item-info-hidden {
+        pointer-events: none;
+        display: block;
+        position: absolute;
+        z-index: 5;
+        top: 50%;
+        left: calc(100% + 10px);
+        transform: translateY(-50%) scale(0);
+        width: 100%;
+        max-width: 281px;
+        min-width: 281px;
+        padding: 12px 10px;
+        overflow: hidden;
+        font-family: 'Gilroy Medium';
+        font-size: 14px;
+        line-height: 21px;
+        color: #c2c2c2;
+        background-color: #ffffff;
+        box-shadow: 0 0 3px lightgray;
+        transition: 0.3s ease; }
+        .comparison-row .filter-item-info-hidden img {
+          pointer-events: fill;
+          display: none;
+          position: absolute;
+          cursor: pointer;
+          top: 5px;
+          right: 5px;
+          width: 20px;
+          height: 20px;
+          min-width: 20px;
+          max-width: 20px;
+          min-height: 20px; }
+          @media (max-width: 992px) {
+            .comparison-row .filter-item-info-hidden img {
+              display: block; } }
+        @media (max-width: 992px) {
+          .comparison-row .filter-item-info-hidden {
+            padding-top: 30px;
+            left: auto;
+            right: 0;
+            transform: translateY(0) scale(0);
+            top: 100%; } }
+        @media (max-width: 767px) {
+          .comparison-row .filter-item-info-hidden {
+            padding-top: 30px;
+            left: 0; } }
+      .comparison-row .filter-item-info.active .filter-item-info-hidden {
+        transform: translateY(0) scale(1); }
+      @media (min-width: 993px) {
+        .comparison-row .filter-item-info:hover .filter-item-info-hidden {
+          transform: translateY(-50%) scale(1); } }
+  .comparison-title p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Gilroy Bold';
+    font-size: 14px;
+    line-height: 14px;
+    color: #737373; }
+
 .footer {
   background-color: #363636;
   padding: 77px 0 60px; }
