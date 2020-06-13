@@ -229,11 +229,20 @@ var common = {
 				list.addClass('no-cnt');
 			}
 		});
+
 		$('.delete-cart-item').click(function(e){
 			e.preventDefault();
 			var list = $(this).closest('.cart-list');
 			$(this).closest('.cart-item').remove();
 			if($('.cart-list .cart-item').length == 0) {
+				list.addClass('no-cnt');
+			}
+		});
+		$('.delete-comparison').click(function(e){
+			e.preventDefault();
+			var list = $(this).closest('.comparison-list');
+			$(this).closest('.comparison-item').remove();
+			if($('.comparison-list .comparison-item').length == 0) {
 				list.addClass('no-cnt');
 			}
 		});

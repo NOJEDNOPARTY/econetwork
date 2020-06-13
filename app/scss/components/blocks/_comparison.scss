@@ -7,6 +7,22 @@
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
+        &.no-cnt {
+            justify-content: center;
+            & .comparison-parameters,
+            & .comparison-items-wrap {display: none;}
+            & p.comparison-no-cnt {display: block;}
+        }
+        & p.comparison-no-cnt  {
+            display: none;
+            width: 100%;
+            padding-bottom: 20px;
+            font-family: 'Gilroy Bold';
+            font-size: 21px;
+            line-height: 21px;
+            text-align: center;
+            color: #4c4c4c;
+        }
         & .delete-comparison {cursor: pointer;}
     }
     &-items {
@@ -40,6 +56,9 @@
         width: 100%;
         max-width: 260px;
         min-width: 260px;
+        @media (max-width: 596px) {
+            display: none;
+        }
         & .comparison-top {
             display: flex;
             flex-direction: column;
@@ -61,6 +80,10 @@
         border: 1px solid #ebebeb;
         border-radius: 15px;
         padding-bottom: 15px;
+        @media (max-width: 596px) {
+            max-width: 280px;
+            min-width: 280px;
+        }
         &:not(:last-child) {
             margin-right: 20px;
             & .gray-row {
@@ -83,6 +106,7 @@
             font-size: 14px;
             line-height: 14px;
             color: #737373;
+            @media (max-width: 596px) {padding: 0 0 0 15px;}
         }
     }
     &-top {
@@ -90,6 +114,7 @@
         width: 100%;
         &-item {
             padding: 20px 18px 20px 5px;
+            @media (max-width: 596px) {padding: 20px 5px 20px 5px;}
             & .comparison-triggers {
                 display: flex;
                 align-items: center;
@@ -154,6 +179,25 @@
         justify-content: flex-start;
         flex-flow: row wrap;
         height: 56px;    
+        @media (max-width: 596px) {
+            height: auto;
+            min-height: 70px;
+            padding: 10px 0;
+            align-items: flex-start;
+        }
+        & .row-p {
+            display: none;
+            width: 100%;
+            padding-bottom: 5px !important;
+            @media (max-width: 596px) {
+                display: flex;
+                font-family: 'Gilroy Black' !important;
+                font-size: 14px !important;
+                line-height: 14px !important;
+                text-transform: uppercase !important;
+                color: #737373;
+            }
+        }
         &.gray-row {
             background-color: #f8f8f8;
         }

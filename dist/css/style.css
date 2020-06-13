@@ -4013,6 +4013,22 @@ header.open {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start; }
+    .comparison-list.no-cnt {
+      justify-content: center; }
+      .comparison-list.no-cnt .comparison-parameters,
+      .comparison-list.no-cnt .comparison-items-wrap {
+        display: none; }
+      .comparison-list.no-cnt p.comparison-no-cnt {
+        display: block; }
+    .comparison-list p.comparison-no-cnt {
+      display: none;
+      width: 100%;
+      padding-bottom: 20px;
+      font-family: 'Gilroy Bold';
+      font-size: 21px;
+      line-height: 21px;
+      text-align: center;
+      color: #4c4c4c; }
     .comparison-list .delete-comparison {
       cursor: pointer; }
   .comparison-items {
@@ -4039,6 +4055,9 @@ header.open {
     width: 100%;
     max-width: 260px;
     min-width: 260px; }
+    @media (max-width: 596px) {
+      .comparison-parameters {
+        display: none; } }
     .comparison-parameters .comparison-top {
       display: flex;
       flex-direction: column;
@@ -4058,6 +4077,10 @@ header.open {
     border: 1px solid #ebebeb;
     border-radius: 15px;
     padding-bottom: 15px; }
+    @media (max-width: 596px) {
+      .comparison-item {
+        max-width: 280px;
+        min-width: 280px; } }
     .comparison-item:not(:last-child) {
       margin-right: 20px; }
       .comparison-item:not(:last-child) .gray-row {
@@ -4077,11 +4100,17 @@ header.open {
       font-size: 14px;
       line-height: 14px;
       color: #737373; }
+      @media (max-width: 596px) {
+        .comparison-item .comparison-row p {
+          padding: 0 0 0 15px; } }
   .comparison-top {
     height: 180px;
     width: 100%; }
     .comparison-top-item {
       padding: 20px 18px 20px 5px; }
+      @media (max-width: 596px) {
+        .comparison-top-item {
+          padding: 20px 5px 20px 5px; } }
       .comparison-top-item .comparison-triggers {
         display: flex;
         align-items: center;
@@ -4136,6 +4165,24 @@ header.open {
     justify-content: flex-start;
     flex-flow: row wrap;
     height: 56px; }
+    @media (max-width: 596px) {
+      .comparison-row {
+        height: auto;
+        min-height: 70px;
+        padding: 10px 0;
+        align-items: flex-start; } }
+    .comparison-row .row-p {
+      display: none;
+      width: 100%;
+      padding-bottom: 5px !important; }
+      @media (max-width: 596px) {
+        .comparison-row .row-p {
+          display: flex;
+          font-family: 'Gilroy Black' !important;
+          font-size: 14px !important;
+          line-height: 14px !important;
+          text-transform: uppercase !important;
+          color: #737373; } }
     .comparison-row.gray-row {
       background-color: #f8f8f8; }
     .comparison-row .filter-item-info {
