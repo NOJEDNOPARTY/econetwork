@@ -13,7 +13,15 @@
             align-items: center;
             justify-content: flex-start;
             @media (max-width: 992px) {
+                width: 100%;
+                max-width: 305px;
                 &:not(:last-child) {margin-bottom: 20px;}
+            }
+            @media (max-width: 600px) {
+                max-width: 260px;
+                & p { 
+                    & br {display: none;}
+                }
             }
             &-icon {
                 display: flex;

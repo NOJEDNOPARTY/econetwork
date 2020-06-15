@@ -153,20 +153,6 @@ var common = {
 				$(this).toggleClass('open')
 			});
 		}else {
-			$('.filter-item-info').click(function(e){
-				e.preventDefault()
-				$(this).closest('.filter-item').toggleClass('open')
-				$(this).closest('.filter-item-title').toggleClass('active')
-				$(this).addClass('active')
-			});
-			$('.filter-item-info-hidden img').click(function(e){
-				e.preventDefault();
-				setTimeout(function() {
-					$(this).closest('.filter-item').toggleClass('open')
-					$(this).closest('.filter-item-title').toggleClass('active')
-					$('.filter-item-info').removeClass('active')
-				}, 200)
-			});
 			$('.caller').click(function(){
 				$(this).toggleClass('open')
 			});
@@ -181,6 +167,23 @@ var common = {
 					$(this).closest('.more-cnt').removeClass('more-active');
 					$(this).find('span').text('Показать еще');
 				}
+			});
+		}
+
+		if($(window).width() < 994) {
+			$('.filter-item-info').click(function(e){
+				e.preventDefault()
+				$(this).closest('.filter-item').toggleClass('open')
+				$(this).closest('.filter-item-title').toggleClass('active')
+				$(this).addClass('active')
+			});
+			$('.filter-item-info-hidden img').click(function(e){
+				e.preventDefault();
+				setTimeout(function() {
+					$(this).closest('.filter-item').toggleClass('open')
+					$(this).closest('.filter-item-title').toggleClass('active')
+					$('.filter-item-info').removeClass('active')
+				}, 200)
 			});
 		}
 
@@ -432,7 +435,7 @@ var common = {
 			if(formField.hasClass('form-error') == false){
 				if($(this).closest('.cart').hasClass('cart') == true) {
 					document.location.href = "./checkout.html";
-				}else {
+				}else if($(this).find('input[type="submit"]').hasClass('filter-btn-trigger') == false) {
 					document.location.href = "./thanks.html";
 				}
 			}

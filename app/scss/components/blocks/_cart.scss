@@ -84,7 +84,7 @@
     &-info {
         width: 100%;
         max-width: 330px;
-        padding: 38px 33px 40px 28px;
+        padding: 38px 20px 40px 20px;
         background-color: #f8f8f8;
         @media (max-width: 992px) {
             order: 1;
@@ -109,14 +109,18 @@
                 font-family: 'Gilroy Bold';
                 font-size: 21px;
                 line-height: 21px;
-                color: #8dc63f; 
+                color: #8dc63f;
                 transition: 0.3s ease;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
                 &:hover {color: #6ca954;}
             }
             & > span {
                 width: 100%;
-                max-width: 60px;
-                min-width: 60px;
+                max-width: 40px;
+                min-width: 40px;
             }
             & span {
                 font-family: 'Gilroy Regular';
@@ -510,6 +514,7 @@
             flex-direction: column;
             align-items: center;
             padding-top: 0;
+            width: 100%;
         }
         & div {
             display: flex;
