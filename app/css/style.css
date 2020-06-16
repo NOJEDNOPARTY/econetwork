@@ -4681,6 +4681,88 @@ header.open {
       .rev-slider-wrap .rev > p:not(:last-child) {
         margin-bottom: 16px; }
 
+.about {
+  padding-bottom: 110px;
+  overflow: hidden; }
+  .about-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 41px; }
+    @media (max-width: 767px) {
+      .about-row {
+        flex-direction: column; } }
+    .about-row-3 {
+      padding-top: 64px;
+      margin-bottom: 57px; }
+      @media (max-width: 767px) {
+        .about-row-3 {
+          padding-top: 0;
+          margin-bottom: 40px; } }
+  .about-img {
+    position: relative;
+    width: 100%;
+    max-width: 375px; }
+    @media (max-width: 767px) {
+      .about-img {
+        order: 2;
+        margin: 0 auto !important; } }
+    .about-img img:not(.about-img-bg) {
+      width: 100%;
+      position: relative;
+      z-index: 2; }
+    .about-img-1 {
+      margin-right: 115px; }
+      @media (max-width: 992px) {
+        .about-img-1 {
+          margin-right: 20px; } }
+      .about-img-1 .about-img-bg {
+        position: absolute;
+        top: 17px;
+        left: -158px;
+        z-index: 1; }
+        @media (max-width: 992px) {
+          .about-img-1 .about-img-bg {
+            display: none; } }
+    .about-img-2 {
+      margin-left: 45px; }
+      @media (max-width: 992px) {
+        .about-img-2 {
+          margin-left: 20px; } }
+      .about-img-2 .about-img-bg {
+        position: absolute;
+        top: 23px;
+        right: -86px;
+        z-index: 1; }
+        @media (max-width: 1100px) {
+          .about-img-2 .about-img-bg {
+            top: -30px; } }
+        @media (max-width: 992px) {
+          .about-img-2 .about-img-bg {
+            display: none; } }
+  @media (max-width: 767px) {
+    .about-text {
+      order: 1;
+      margin: 0 0 30px; } }
+  .about-text p,
+  .about-text a {
+    font-family: 'Gilroy Regular';
+    font-size: 16px;
+    line-height: 21px;
+    color: #737373;
+    transition: 0.3s ease; }
+    @media (max-width: 767px) {
+      .about-text p,
+      .about-text a {
+        font-size: 14px;
+        line-height: 19px; } }
+  .about-text a {
+    color: #8dc63f; }
+    .about-text a:hover {
+      color: #6ca954; }
+  .about-text p:not(:last-child) {
+    margin-bottom: 21px; }
+
 .footer {
   background-color: #363636;
   padding: 77px 0 60px; }
