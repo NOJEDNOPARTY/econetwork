@@ -328,12 +328,124 @@ var common = {
 			nav: false,
 			dots: true,
 			items: 1,
+			margin:20,
+			autoplay:true,
+			autoplayTimeout:5000,
+			autoplayHoverPause:true,
+		});
+
+		var sliderLettersItem = $('.slider-letters .slider'),
+			sliderVideosItem = $('.slider-videos .slider'),
+			sliderAudioItem = $('.slider-audio .slider'),
+			sliderRevsItem = $('.slider-revs .slider');
+
+		sliderLettersItem.owlCarousel({
+			loop:true,
+			nav: false,
+			dots: false,
+			items: 5,
+			margin:20,
+			autoplay:true,
+			autoplayTimeout:5000,
+			autoplayHoverPause:true,
+			responsive:{
+				0:{
+					items:1
+				},
+				359:{
+					items: 2
+				},
+				550:{
+					items:3
+				},
+				768:{
+					items:4
+				},
+				993:{
+					items:5
+				}
+			}
+		});
+
+		sliderVideosItem.owlCarousel({
+			loop:true,
+			nav: false,
+			dots: false,
+			items: 3,
+			margin:20,
+			autoplay:true,
+			autoplayTimeout:5000,
+			autoplayHoverPause:true,
+			responsive:{
+				0:{
+					items:1
+				},
+				768:{
+					items:2
+				},
+				993:{
+					items:3
+				}
+			}
+		});
+
+		sliderAudioItem.owlCarousel({
+			loop:true,
+			nav: false,
+			dots: false,
+			items: 5,
+			margin:20,
+			autoplay:true,
+			autoplayTimeout:5000,
+			autoplayHoverPause:true,
+			responsive:{
+				0:{
+					items:1
+				},
+				359:{
+					items: 2
+				},
+				550:{
+					items:3
+				},
+				768:{
+					items:4
+				},
+				993:{
+					items:5
+				}
+			}
+		});
+
+		sliderRevsItem.owlCarousel({
+			loop:true,
+			nav: false,
+			dots: false,
+			autoHeight: true,
+			items: 1,
 			margin:0,
 			autoplay:true,
 			autoplayTimeout:5000,
 			autoplayHoverPause:true,
 		});
-						
+					
+		
+		$('.slider-item .am-prev').click(function() {
+			var dataSlider = $(this).attr('data-slider')
+			$(dataSlider).trigger('prev.owl.carousel', [300]);
+			var bLazy = new Blazy({});
+		})
+		
+		$('.slider-item .am-next').click(function() {
+			var dataSlider = $(this).attr('data-slider')
+			$(dataSlider).trigger('next.owl.carousel', [300]);
+			var bLazy = new Blazy({});
+		})
+
+		$('.owl-carousel').on('translated.owl.carousel', function(event) {
+			var bLazy = new Blazy({});
+		})
+
 	},
 	select: function() {
 		var x, i, j, l, ll, selElmnt, a, b, c;
