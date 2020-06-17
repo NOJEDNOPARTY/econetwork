@@ -36,6 +36,7 @@
             @media (max-width: 992px) {margin:  0 0 50px;}
             @media (max-width: 767px) {margin:  0 0 15px;}
         }
+        &.active .sections-title {color: #8dc63f;}
     }
     &-cnt {
         padding: 134px 15px 20px 50px;
@@ -83,7 +84,8 @@
                 @media (max-width: 1270px) {margin-right: 10px;}
                 @media (max-width: 600px) {margin-right: 0;}
             }
-            &:hover {color: #8dc63f;}
+            &:hover,
+            &.active {color: #8dc63f;}
             @media (max-width: 1270px) {margin-bottom: 10px;}
             @media (max-width: 600px) {display: block;}
         }
@@ -202,6 +204,8 @@
     }
     & .sections-item-4 {
         padding-right: 0;
+        min-height: 300px;
+        @media (max-width: 600px) {min-height: 0;}
         & .sections-cnt {
             width: 100%;
             max-width: 323px;
@@ -260,6 +264,8 @@
     }
     & .sections-item-6 {
         padding-right: 0;
+        min-height: 300px;
+        @media (max-width: 600px) {min-height: 0;}
         & .sections-cnt {
             width: 100%;
             max-width: 305px;
@@ -295,6 +301,9 @@
             & img {width: 100%;}
         }
     }
-    @media (min-width: 992px)  {& .sections-item:hover .sections-img {transform: translateY(-28px);}}
+    @media (min-width: 992px)  {
+        & .sections-item:hover .sections-img,
+        & .sections-item.active .sections-img {transform: translateY(-28px);}
+    }
     
 }

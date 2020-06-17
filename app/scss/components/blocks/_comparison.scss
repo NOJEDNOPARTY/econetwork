@@ -116,6 +116,7 @@
             padding: 20px 18px 20px 5px;
             @media (max-width: 596px) {padding: 20px 5px 20px 5px;}
             & .comparison-triggers {
+                position: static;
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;

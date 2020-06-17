@@ -54,6 +54,8 @@
         }
     }
     &-text {
+        width: 100%;
+        max-width: 720px;
         @media (max-width: 767px) {
             order: 1;
             margin: 0 0 30px;

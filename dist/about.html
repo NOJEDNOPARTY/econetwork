@@ -43,6 +43,8 @@
 	
 	<link rel="stylesheet" href="css/libs/range/ion.rangeSlider.min.css">
 	
+	<link rel="stylesheet" href="css/libs/animate/animate.css">
+	
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
@@ -220,21 +222,21 @@
                     <h1 class="title title-s">компания</h1>
                     <div class="about-cnt">
                         <div class="about-row">
-                            <div class="about-img about-img-1">
+                            <div class="about-img wow fadeInLeft about-img-1">
                                 <img src="./images/about-img-1.jpg" alt="about">
                                 <img class="about-img-bg" src="./images/about-img-11.png" alt="about">
                             </div>
-                            <div class="about-text">
+                            <div class="about-text  wow fadeInRight">
                                 <p>Компания "ЭКО-СЕТЬ" работает на рынке канализации с 2006 года и является  фициальным дилером таких станций очистки, как: <a href="#">Юнилос Астра</a>, <a href="#">Топас</a>, <a href="#">Биодека</a>,  <a href="#">Евробион</a>.</p>
                                 <p>Все загородные канализации, которые мы предлагаем, являются передовым  решением для отведения бытовых стоков в частных домах и на дачах. </p>
                             </div>
                         </div>
                         <div class="about-row">
-                            <div class="about-text">
+                            <div class="about-text wow  fadeInLeft">
                                 <p>Как официальные дилеры, мы несем все гарантийные обязательства перед Вами и  выступаем на стороне заказчика при возникновении неполадок, решая его проблемы  с производителем канализации. </p>
                                 <p>Это основополагающий фактор для политики компании: мы продаем только оригинальную  продукцию, с полной комплектацией от производителя, а также монтируем станции,  соблюдая все нормы и СНиПы, избегая проблем с канализацией в будущем. </p>
                             </div>
-                            <div class="about-img about-img-2">
+                            <div class="about-img about-img-2  wow fadeInRight">
                                 <img src="./images/about-img-2.jpg" alt="about">
                                 <img class="about-img-bg" src="./images/about-img-22.png" alt="about">
                             </div>
@@ -396,6 +398,21 @@
             </div>
         </div>
     </div>
+    <div id="callbackPopupInstallation" class="popup-wrapper">
+        <div class="popup-layout">
+            <div class="popup">
+                <div class="popup-cnt">
+                    <form action="#">
+                        <div class="popup-title">Заказать монтаж!</div>
+                        <input type="text" placeholder="Ваше имя" class="field">
+                        <input type="tel" placeholder="телефон* " class="field phone-mask">
+                        <input class="btn" type="submit" value="заказать">
+                    </form>
+                </div>
+                <div class="popup-close"><img src="./images/popup-close.svg" alt="icon-close"></div>
+            </div>
+        </div>
+    </div>
     <a href="#" id="topBtn" class="top-btn">
         <svg width="35" height="35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 99.2 99.2" style="enable-background:new 0 0 99.2 99.2;" xml:space="preserve">
@@ -502,7 +519,7 @@
     <script src="js/libs/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/libs/fancybox/jquery.fancybox.min.js"></script>
     <script src="js/libs/blazy/blazy.min.js"></script>
-    <!-- <script src="js/libs/wow.min.js"></script> -->
+    <script src="js/libs/wow.min.js"></script>
     
     <!--general-->
     <script src="js/common.js"></script>

@@ -510,7 +510,6 @@ footer {flex: 0 0 auto;}
         @media (max-width: 1250px) {
             position: static;
             flex-flow: row wrap;
-            justify-content: center;
             padding-top: 30px;
         }
         & p {
@@ -525,9 +524,6 @@ footer {flex: 0 0 auto;}
             margin-bottom: 10px !important;
             @media (max-width: 1250px) {display: block;}
         }
-        &-trigger {
-            @media (max-width: 1250px) {display: none !important;}
-        }
         &-trigger,
         &-cnt a{
             cursor: pointer;
@@ -539,7 +535,7 @@ footer {flex: 0 0 auto;}
             transition: 0.1s linear;
             &:not(:last-child) {
                 margin-bottom: 5px;
-                @media (max-width: 1250px) {margin: 0 5px 0 0;}
+                @media (max-width: 1250px) {margin: 0 11px 0 0;}
             }
             & img {
                 width: 25px;

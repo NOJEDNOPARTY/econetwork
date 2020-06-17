@@ -122,6 +122,7 @@ var common = {
 	},
 	main: function(){
 
+		new WOW().init();
 
 		$('.row-hidden-trigger').click(function(e){
 			e.preventDefault();
@@ -187,7 +188,10 @@ var common = {
 			});
 		}
 
-		$('.item-trigger').click(function(){
+		$('.item-trigger:not(.card-item-add-trigger)').click(function(){
+			$(this).toggleClass('active');
+		});
+		$('.card-item-add-link').click(function(){
 			$(this).toggleClass('active');
 		});
 
@@ -373,14 +377,14 @@ var common = {
 			dots: false,
 			items: 3,
 			margin:20,
-			autoplay:true,
+			autoplay:false,
 			autoplayTimeout:5000,
 			autoplayHoverPause:true,
 			responsive:{
 				0:{
 					items:1
 				},
-				768:{
+				550:{
 					items:2
 				},
 				993:{
@@ -395,7 +399,7 @@ var common = {
 			dots: false,
 			items: 5,
 			margin:20,
-			autoplay:true,
+			autoplay:false,
 			autoplayTimeout:5000,
 			autoplayHoverPause:true,
 			responsive:{
@@ -424,7 +428,7 @@ var common = {
 			autoHeight: true,
 			items: 1,
 			margin:0,
-			autoplay:true,
+			autoplay:false,
 			autoplayTimeout:5000,
 			autoplayHoverPause:true,
 		});
