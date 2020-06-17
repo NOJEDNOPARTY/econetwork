@@ -62,10 +62,20 @@
         width: 100%;
         overflow-x: scroll;
     }
+    & .table-mob-img {
+        display: none;
+        @media (max-width: 992px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto 0;
+            width: 50px;
+        }
+    }
     & table {
         width: 100%;
         @media (max-width: 992px) {
-            min-width: 950px;
+            min-width: 960px;
         }
         & th {
             height: 60px;
