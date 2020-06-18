@@ -479,16 +479,23 @@ footer {flex: 0 0 auto;}
         @media (max-width: 767px) {
             min-height: 180px;
         }
+        @media (max-width: 400px) {
+            min-height: 0px;
+        }
     }
     & img {
         width: 100%;
         max-width: 440px;
         margin-bottom: 12px;
-        &[align="right"] {margin-left: 22px;}
-        &[align="left"] {margin-right: 22px;}
+        &[align="right"] {
+            margin-left: 22px;
+        }
+        &[align="left"] {
+            margin-right: 22px;
+        }
         @media (max-width: 992px) {max-width: 310px;}
         @media (max-width: 767px) {
-            margin: 0 auto 35px;
+            margin: 0 auto 35px !important;
             float: none;
         }
     }

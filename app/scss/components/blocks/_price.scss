@@ -59,6 +59,7 @@
 
 
 .table {
+    width: 100%;
     &-wrap {
         display: flex;
         align-items: center;
@@ -96,12 +97,12 @@
             color: #4c4c4c;
             &:first-child {
                 text-align: left;
-                padding-left: 23px;
+                padding-left: 20px;
             }
         }
         & td {
-            height: 50px;
-            padding: 10px 11px 10px;
+            height: 54px;
+            padding: 10px 12px 10px;
             text-align: center;
             vertical-align: middle;
             font-family: 'Gilroy Regular';
@@ -125,9 +126,11 @@
         & tr {
             cursor: pointer;
             &:nth-child(even) {background-color: #f8f8f8;}
-            &:not(:first-child):hover {background-color: #8dc63f;}
-            &:hover a,
-            &:hover td{color: #ffffff;}
+            @media (min-width: 993px) {
+                &:not(:first-child):hover {background-color: #8dc63f;}
+                &:hover a,
+                &:hover td{color: #ffffff;}
+            }
         }
     }
 }

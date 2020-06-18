@@ -203,8 +203,10 @@ nav {
                     opacity: 0;
                 }
                 &:hover {
-                    color: #8dc63f;
-                    &::before {opacity: 1;}
+                    @media (min-width: 993px) {
+                        color: #8dc63f;
+                        &::before {opacity: 1;}
+                    }
                 }
             }
             

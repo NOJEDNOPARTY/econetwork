@@ -28,8 +28,9 @@
             color: #737373;
         }
     }
-    & .table {
+    & .table-wrap {
         & h4 {
+            width: 100%;
             font-family: 'Gilroy Bold';
             margin-bottom: 40px;
             padding-top: 67px;
@@ -888,7 +889,7 @@
                 right: 0px;
             }
             .stickers {top: 16px;}
-            .catalog-item-img {height: 142px;}
+            .catalog-item-img {height: 115px;}
             .catalog-item-title {
                 margin-bottom: 0px;
                 font-size: 18px;
