@@ -826,7 +826,8 @@ footer {
     margin: 25px auto 26px; }
     @media (max-width: 767px) {
       .article iframe {
-        min-height: 180px; } }
+        min-height: 0;
+        max-width: 400px; } }
     @media (max-width: 400px) {
       .article iframe {
         min-height: 0px; } }
@@ -4614,7 +4615,10 @@ header.open {
   width: 100%;
   max-width: 368px;
   min-height: 205px; }
-  @media (max-width: 450px) {
+  @media (max-width: 1250px) {
+    .slider-videos .slider iframe {
+      min-height: 167px; } }
+  @media (max-width: 800px) {
     .slider-videos .slider iframe {
       min-height: 0; } }
 
@@ -5153,15 +5157,17 @@ header.open {
         display: none; }
       @media (max-width: 1250px) {
         .card-img-bg {
-          top: -170px; } }
-      @media (max-width: 650px) {
+          top: -125px;
+          left: 0px; } }
+      @media (max-width: 600px) {
         .card-img-bg {
           top: -183px;
-          left: 43px; }
-          .card-img-bg:not(.card-img-bg-mob) {
-            display: none; }
-          .card-img-bg.card-img-bg-mob {
-            display: block; } }
+          left: 43px; } }
+      @media (max-width: 1250px) {
+        .card-img-bg:not(.card-img-bg-mob) {
+          display: none; }
+        .card-img-bg.card-img-bg-mob {
+          display: block; } }
   .card-icons-list {
     position: absolute;
     bottom: 0px;

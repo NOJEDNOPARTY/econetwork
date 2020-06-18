@@ -82,7 +82,10 @@
                 width: 100%;
                 max-width: 368px;
                 min-height: 205px;
-                @media (max-width: 450px) {
+                @media (max-width: 1250px) {
+                    min-height: 167px;
+                }
+                @media (max-width: 800px) {
                     min-height: 0;
                 }
             }

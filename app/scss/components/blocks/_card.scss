@@ -360,12 +360,17 @@
             left: 0;
             z-index: 0;
             &.card-img-bg-mob {display: none;}
-            @media (max-width: 1250px) {top: -170px;}
-            @media (max-width: 650px) {
-                &:not(.card-img-bg-mob) {display: none;}
-                &.card-img-bg-mob {display: block;}
+            @media (max-width: 1250px) {
+                top: -125px;
+                left: 0px;
+            }
+            @media (max-width: 600px) {
                 top: -183px;
                 left: 43px;
+            }
+            @media (max-width: 1250px) {
+                &:not(.card-img-bg-mob) {display: none;}
+                &.card-img-bg-mob {display: block;}
             }
         }
     }
