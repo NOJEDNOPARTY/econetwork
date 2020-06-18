@@ -1977,7 +1977,8 @@ header.open {
       line-height: 19px; }
       .catalog-item-price span.price-value {
         font-size: 16px;
-        line-height: 16px; }
+        line-height: 16px;
+        text-transform: uppercase; }
       .catalog-item-price span.old {
         margin-right: 16px;
         color: #c2c2c2; }
@@ -1985,7 +1986,8 @@ header.open {
           text-decoration: line-through; }
       .catalog-item-price span.new span {
         font-size: 16px;
-        line-height: 16px; }
+        line-height: 16px;
+        text-transform: uppercase; }
   .catalog-item-links {
     display: flex;
     align-items: center;
@@ -4294,6 +4296,7 @@ header.open {
         margin-bottom: 10px;
         font-family: 'Gilroy Bold';
         font-size: 14px;
+        text-transform: uppercase;
         line-height: 14px;
         color: #4c4c4c; }
       .comparison-top-item-info div {
